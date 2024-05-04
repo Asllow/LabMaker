@@ -4,6 +4,7 @@
 /public/hot
 /public/storage
 /storage/*.key
+/test
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml

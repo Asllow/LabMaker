@@ -16,7 +16,7 @@
                 <div class="">Entrar</div>
                 <div class="">
                     <div class="">
-                        <h1 class="">Entrar na sua conta aaaa</h1>
+                        <h1 class="">Entrar na sua conta</h1>
                         <form class="" method="post" action="{{ route('entrar.action') }}">
                             @csrf
                             @if ($errors->any())

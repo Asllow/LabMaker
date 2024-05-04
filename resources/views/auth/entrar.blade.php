@@ -9,14 +9,14 @@
         <title>Entrar</title>
         <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet" type="text/css" >
     </head>
-    
+
     <body>
         <section class="">
             <div class="">
                 <div class="">Entrar</div>
                 <div class="">
                     <div class="">
-                        <h1 class="">Entrar na sua conta</h1>
+                        <h1 class="">Entrar na sua conta aaaa</h1>
                         <form class="" method="post" action="{{ route('entrar.action') }}">
                             @csrf
                             @if ($errors->any())

@@ -7,12 +7,10 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>@yield('title')</title>
-        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>
     </head>
 
     <body>
-        <div class="flex flex-col w-full h-screen px-4 py-8 mt-10">
+        <div class="">
             <div>@yield('contents')</div>
         </div>
     </body>

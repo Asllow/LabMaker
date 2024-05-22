@@ -33,7 +33,7 @@ class AuthController extends Controller
             'course' => 'required',
             'birth_date' => 'required|date|before:-13 years',
             'email' => 'required|email',
-            'password' => ['required', 'confirmed', 
+            'password' => ['required', 'confirmed',
             Password::min(8)
                 ->letters()
                 ->mixedCase()
@@ -41,7 +41,7 @@ class AuthController extends Controller
                 ->symbols()
                 ->uncompromised()]
         ])->validate();
-        
+
         User::create([
             'name' => $request->name,
             'last_name' => $request->last_name,
@@ -74,10 +74,10 @@ class AuthController extends Controller
         }
 
         $request->session()->regenerate();
-        if (auth()->user()->permission == 'admin'){
-            return redirect()->route('admin/home');
-        }
-        else{
+
+        if (auth()->user()->permission == 'admin_all'){
+            return redirect()->route('dashboard');
+        } else{
             return redirect()->route('home');
         }
     }

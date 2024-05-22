@@ -35,4 +35,10 @@ Route::controller(PontoController::class)->group(function (){
         ->name('internetest');
 });
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::middleware(['auth', 'user-acess:user'])->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+});
+
+Route::middleware(['auth', 'user-acess:admin_all'])->group(function () {
+    Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
+});

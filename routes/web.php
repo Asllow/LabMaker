@@ -7,7 +7,7 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');;
 
 Route::controller(AuthController::class)->group(function () {
     Route::get('cadastrar', 'cadastrar')

@@ -11,7 +11,7 @@ class HomeController extends Controller
     }
 
     public function index(){
-        return auth()->user()->permission;
+        return auth()->user()->permission_maker;
     }
 
     public function dashboard(){

@@ -51,7 +51,9 @@ class AuthController extends Controller
             'phone' => $phone,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'permission' => "0"
+            'permission_maker' => "0",
+            'permission_era' => "0",
+            'permission_makesoft' => "0"
         ]);
 
         return redirect()->route('entrar');
@@ -75,7 +77,11 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        if (auth()->user()->permission_maker == 'none'){
+        User::class->permission_era();
+        User::class->permission_maker();
+        User::class->permission_makesoft();
+
+        if (auth()->user()->permission_era == 'none'){
             return redirect()->route('dashboard');
         } else{
             return redirect()->route('home');

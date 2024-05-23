@@ -39,6 +39,6 @@ Route::middleware(['auth', 'era-access:1'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
-Route::middleware(['auth', 'maker-access:user'])->group(function () {
+Route::middleware(['auth', 'maker-access:1'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 });

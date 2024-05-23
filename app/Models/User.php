@@ -50,7 +50,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    protected function permission_maker():Attribute{
+    protected function permission():Attribute{
         return new Attribute(
 
             get: fn ($value) => [

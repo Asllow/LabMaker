@@ -15,7 +15,7 @@ class HomeController extends Controller
     }
 
     public function dashboard(){
-        return auth()->user()->permission;
+        return auth()->user()->course;
     }
 
 }

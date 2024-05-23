@@ -17,10 +17,19 @@ class UserAccess
    // {
     //    return $next($request);
    // }yh9
+    public function debug_to_console($data): void
+    {
+        $output = $data;
+        if (is_array($output))
+            $output = implode(',', $output);
 
+        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
+    }
     public function handle(Request $request, Closure $next, $userPermission)
     {
         if (auth()->user()->permission == $userPermission) {
+            $this->debug_to_console(auth()->user()->permission);
+            $this->debug_to_console($userPermission);
             return $next($request);
         }
 

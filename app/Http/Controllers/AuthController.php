@@ -21,15 +21,6 @@ class AuthController extends Controller
         return view('auth/cadastrar');
     }
 
-    public function debug_to_console($data): void
-    {
-        $output = $data;
-        if (is_array($output))
-            $output = implode(',', $output);
-
-        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-    }
-
     public function salvarCadastro(Request $request){
         $registrationfalse = $request->registrationfalse;
         $list = " -()";
@@ -85,7 +76,6 @@ class AuthController extends Controller
         $request->session()->regenerate();
 
         if (auth()->user()->permission == 'admin_all'){
-            $this->debug_to_console(auth()->user()->permission);
             return redirect()->route('dashboard');
         } else{
             return redirect()->route('home');

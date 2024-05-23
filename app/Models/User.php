@@ -53,7 +53,16 @@ class User extends Authenticatable
     protected function permission():Attribute{
         return new Attribute(
             get: fn ($value) => [
-
+                "user",
+                "user_maker",
+                "user_era",
+                "user_makesoft",
+                "admin_maker",
+                "admin_era",
+                "admin_makesoft",
+                "admin_era_maker",
+                "admin_makesoft_maker",
+                "admin_all"
             ] [$value],
         );
     }

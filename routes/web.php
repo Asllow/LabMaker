@@ -39,6 +39,6 @@ Route::middleware(['auth', 'maker-access:none'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
-Route::middleware(['auth', 'maker-access:admin'])->group(function () {
+Route::middleware(['auth', 'maker-access:user'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 });

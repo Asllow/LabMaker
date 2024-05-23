@@ -22,7 +22,9 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('permission')->default(false);
+            $table->boolean('permission_maker')->default(false);
+            $table->boolean('permission_era')->default(false);
+            $table->boolean('permission_makesoft')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

@@ -50,20 +50,13 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    protected function course():Attribute{
+    protected function permission_maker():Attribute{
         return new Attribute(
 
             get: fn ($value) => [
+                "none",
                 "user",
-                "user_maker",
-                "user_era",
-                "user_makesoft",
-                "admin_maker",
-                "admin_era",
-                "admin_makesoft",
-                "admin_era_maker",
-                "admin_makesoft_maker",
-                "admin_all"
+                "admin"
             ] [$value],
         );
     }

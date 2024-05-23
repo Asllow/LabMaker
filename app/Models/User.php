@@ -49,14 +49,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function permission_era():Attribute{
-        return new Attribute(
-            get: fn ($value) => [
-                "none",
-                "user",
-                "admin"
-            ] [$value],
-        );
-    }
 }

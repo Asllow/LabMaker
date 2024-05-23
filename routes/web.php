@@ -35,7 +35,7 @@ Route::controller(PontoController::class)->group(function (){
         ->name('internetest');
 });
 
-Route::middleware(['auth', 'era-access:user'])->group(function () {
+Route::middleware(['auth', 'era-access:1'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 

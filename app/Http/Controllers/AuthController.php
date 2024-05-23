@@ -77,11 +77,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        User::class->permission_era();
-        User::class->permission_maker();
-        User::class->permission_makesoft();
-
-        if (auth()->user()->permission_era == 'none'){
+        if (auth()->user()->permission_era == "0"){
             return redirect()->route('dashboard');
         } else{
             return redirect()->route('home');

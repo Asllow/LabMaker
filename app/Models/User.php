@@ -50,16 +50,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    function debug_to_console($data) {
-        $output = $data;
-        if (is_array($output))
-            $output = implode(',', $output);
-
-        echo "<script>console.log('Debug Objects: " . $output . "' );</script>";
-    }
-
     protected function permission():Attribute{
-        $this->debug_to_console($value);
         return new Attribute(
 
             get: fn ($value) => [

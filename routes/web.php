@@ -34,11 +34,11 @@ Route::controller(PontoController::class)->group(function (){
     Route::get('internetest', 'internetest')
         ->name('internetest');
 });
-/*
+
 Route::middleware(['auth', 'maker-access:none'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
-*/
+
 Route::middleware(['auth', 'maker-access:admin'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 });

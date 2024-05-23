@@ -19,7 +19,7 @@ class MakeSoftAccess
     // }yh9
     public function handle(Request $request, Closure $next, $userPermission)
     {
-        if (auth()->user()->permission_makesoft >= $userPermission) {
+        if (auth()->user()->permission_makesoft <= $userPermission) {
             return $next($request);
         }
 

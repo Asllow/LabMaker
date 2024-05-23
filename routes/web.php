@@ -35,10 +35,10 @@ Route::controller(PontoController::class)->group(function (){
         ->name('internetest');
 });
 
-Route::middleware(['auth', 'era-access:1'])->group(function () {
+Route::middleware(['auth', 'era-access:0'])->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
-Route::middleware(['auth', 'maker-access:0'])->group(function () {
+Route::middleware(['auth', 'maker-access:1'])->group(function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 });

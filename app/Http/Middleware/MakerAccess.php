@@ -19,7 +19,7 @@ class MakerAccess
     // }yh9
     public function handle(Request $request, Closure $next, $userPermission)
     {
-        if (auth()->user()->permission_maker <= $userPermission) {
+        if (auth()->user()->permission_maker >= $userPermission) {
             return $next($request);
         }
 

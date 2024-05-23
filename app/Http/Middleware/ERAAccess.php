@@ -19,7 +19,7 @@ class ERAAccess
     // }yh9
     public function handle(Request $request, Closure $next, $userPermission)
     {
-        if (auth()->user()->permission_era <= $userPermission) {
+        if (auth()->user()->permission_era >= $userPermission) {
             return $next($request);
         }
 

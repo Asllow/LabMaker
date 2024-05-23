@@ -75,7 +75,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        if (auth()->user()->permission == 'admin_all'){
+        if (auth()->user()->permission_maker == 'none'){
             return redirect()->route('dashboard');
         } else{
             return redirect()->route('home');

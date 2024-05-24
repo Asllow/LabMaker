@@ -11,10 +11,11 @@
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
                 <th scope="col" class="px-6 py-3">#</th>
-                <th scope="col" class="px-6 py-3">Title</th>
-                <th scope="col" class="px-6 py-3">Price</th>
-                <th scope="col" class="px-6 py-3">Product Code</th>
-                <th scope="col" class="px-6 py-3">Description</th>
+                <th scope="col" class="px-6 py-3">Imagem</th>
+                <th scope="col" class="px-6 py-3">Nome</th>
+                <th scope="col" class="px-6 py-3">Preço</th>
+                <th scope="col" class="px-6 py-3">Dimensão</th>
+                <th scope="col" class="px-6 py-3">Descrição</th>
                 <th scope="col" class="px-6 py-3">Action</th>
             </tr>
             </thead>

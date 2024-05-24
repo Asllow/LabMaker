@@ -77,11 +77,7 @@ class AuthController extends Controller
 
         $request->session()->regenerate();
 
-        if (auth()->user()->permission_era == "0"){
-            return redirect()->route('dashboard');
-        } else{
-            return redirect()->route('home');
-        }
+        return redirect()->route('dashboard');
     }
 
     public function logout(Request $request){

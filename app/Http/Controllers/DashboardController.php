@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 
 class DashboardController extends Controller
 {
-    public function profilepage()
+    public function meuperfil()
     {
-        return view('profile');
+        return view('perfil');
     }
 }

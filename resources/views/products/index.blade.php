@@ -45,7 +45,7 @@
                             <div class="h-14 pt-5" style="display: inline-flex;">
                                 <a href="{{ route('makesoft.produtos.detalhes', $rs->id_produto) }}" class="text-blue-800">Detalhes</a> |
                                 <a href="{{ route('makesoft.produtos.editar', $rs->id_produto) }}" class="text-green-800 pl-2">Editar</a> |
-                                <form action="" method="POST" onsubmit="return confirm('Delete?')" class="float-right text-red-800">
+                                <form action="{{ route('makesoft.produtos.destruir', $rs->id_produto) }}" method="POST" onsubmit="return confirm('Deletar?')" class="float-right text-red-800">
                                     @csrf
                                     @method('DELETE')
                                     <button>Apagar</button>
@@ -56,7 +56,7 @@
                 @endforeach
             @else
                 <tr>
-                    <td class="text-center" colspan="5">Product not found</td>
+                    <td class="text-center" colspan="5">Produto não encontrado</td>
                 </tr>
             @endif
             </tbody>

@@ -20,7 +20,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('entrar', 'entrarAction')
         ->name('entrar.action');
 
-    Route::get('sair', 'sair')
+    Route::get('sair', 'logout')
         ->middleware('auth')
         ->name('sair');
 });

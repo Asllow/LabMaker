@@ -56,7 +56,7 @@
                     <button data-dropdown class="flex items-center px-3 py-2 focus:outline-none hover:bg-gray-200 hover:rounded-md" type="button" x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
                         <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&h=100&q=80" alt="Profle" class="h-8 w-8 rounded-full">
 
-                        <span class="ml-4 text-sm hidden md:inline-block">{{auth()->user()->getAuthPassword()}}</span>
+                        <span class="ml-4 text-sm hidden md:inline-block">{{auth()->user()->name}}</span>
                         <svg class="fill-current w-3 ml-4" viewBox="0 0 407.437 407.437">
                             <path d="M386.258 91.567l-182.54 181.945L21.179 91.567 0 112.815 203.718 315.87l203.719-203.055z" />
                         </svg>

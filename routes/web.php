@@ -20,9 +20,9 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('entrar', 'entrarAction')
         ->name('entrar.action');
 
-    Route::get('logout', 'logout')
+    Route::get('sair', 'sair')
         ->middleware('auth')
-        ->name('logout');
+        ->name('sair');
 });
 
 Route::controller(PontoController::class)->group(function (){

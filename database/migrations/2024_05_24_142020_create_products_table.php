@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('desc_produto');
             $table->string('dimensao_produto');
             $table->string('img_produto');
-            $table->Integer('preco_produto')->default(false);
+            $table->float('preco_produto', "9", "2")->default(false);
             $table->timestamps();
         });
     }

@@ -36,9 +36,9 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id_produtos)
+    public function show(string $id_produto)
     {
-        $product = Product::findOrFail($id_produtos);
+        $product = Product::findOrFail($id_produto);
         return view('products.show', compact('product'));
     }
 

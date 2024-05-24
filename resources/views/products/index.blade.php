@@ -43,12 +43,12 @@
                         </td>
                         <td class="w-36">
                             <div class="h-14 pt-5" style="display: inline-flex;">
-                                <a href="" class="text-blue-800">Detalhes </a> |
+                                <a href="{{route('makesoft.produtos.mostrar', $rs->id)}}" class="text-blue-800">Detalhes</a> |
                                 <a href="" class="text-green-800 pl-2">Editar</a> |
                                 <form action="" method="POST" onsubmit="return confirm('Delete?')" class="float-right text-red-800">
                                     @csrf
                                     @method('DELETE')
-                                    <button> Apagar</button>
+                                    <button>Apagar</button>
                                 </form>
                             </div>
                         </td>

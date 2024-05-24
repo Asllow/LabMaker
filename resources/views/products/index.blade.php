@@ -16,7 +16,7 @@
                 <th scope="col" class="px-6 py-3">Preço</th>
                 <th scope="col" class="px-6 py-3">Dimensão</th>
                 <th scope="col" class="px-6 py-3">Descrição</th>
-                <th scope="col" class="px-6 py-3">Action</th>
+                <th scope="col" class="px-6 py-3">Ações</th>
             </tr>
             </thead>
             <tbody>
@@ -30,7 +30,7 @@
                             {{ $rs->img_produto }}
                         </td>
                         <td>
-                            {{ $rs->nome_produto }}
+                            <img src="{{ $rs->nome_produto }}">
                         </td>
                         <td>
                             {{ $rs->preco_produto }}
@@ -43,12 +43,12 @@
                         </td>
                         <td class="w-36">
                             <div class="h-14 pt-5">
-                                <a href="" class="text-blue-800">Detail</a> |
-                                <a href="" class="text-green-800 pl-2">Edit</a> |
+                                <a href="" class="text-blue-800">Detalhes</a> |
+                                <a href="" class="text-green-800 pl-2">Editar</a> |
                                 <form action="" method="POST" onsubmit="return confirm('Delete?')" class="float-right text-red-800">
                                     @csrf
                                     @method('DELETE')
-                                    <button>Delete</button>
+                                    <button>Apagar</button>
                                 </form>
                             </div>
                         </td>

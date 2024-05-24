@@ -9,7 +9,13 @@
             <label class="label">
                 <span class="text-base label-text">Nome</span>
             </label>
-            <input name="name" type="text" value="{{ auth()->user()->name,  auth()->user()->last_name}}" class="w-full input input-bordered" />
+            <input name="name" type="text" value="{{ auth()->user()->name}}" class="w-full input input-bordered" />
+        </div>
+        <div>
+            <label class="label">
+                <span class="text-base label-text">Sobrenome</span>
+            </label>
+            <input name="name" type="text" value="{{ auth()->user()->last_name}}" class="w-full input input-bordered" />
         </div>
         <div>
             <label class="label">

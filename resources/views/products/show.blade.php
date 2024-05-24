@@ -16,7 +16,8 @@
             <div class="sm:col-span-4">
                 <label class="block text-sm font-medium leading-6 text-gray-900">Imagem</label>
                 <div class="mt-2">
-                    {{ $product->img_produto }}
+                    <p>{{ $product->img_produto }}</p>
+                    <img src="{{ $product->img_produto }}">
                 </div>
             </div>
             <div class="sm:col-span-4">

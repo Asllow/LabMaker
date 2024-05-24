@@ -65,7 +65,7 @@
                             <ul>
                                 <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">My Profile</a></li>
                                 <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Settings</a></li>
-                                <li class="px-4 py-3 hover:bg-gray-200"><a href="{{ route('logout') }}">Log out</a></li>
+                                <li class="px-4 py-3 hover:bg-gray-200"><a href="{{route('sair')}}">Log out</a></li>
                             </ul>
                         </div>
                     </button>
@@ -105,7 +105,7 @@
                             <span class="text-[15px] ml-4 text-gray-200 font-bold">Profile</span>
                         </div>
                     </a>
-                    <a href="{{route('logout')}}">
+                    <a href="{{route('sair')}}">
                         <div class="my-4 bg-gray-600 h-[1px]"></div>
                         <div class="p-2.5 mt-3 flex items-center rounded-md px-4 duration-300 cursor-pointer hover:bg-blue-600 text-white">
                             <i class="bi bi-box-arrow-in-right"></i>

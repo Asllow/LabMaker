@@ -49,4 +49,5 @@ Route::middleware(['auth', 'maker-access:0', 'era-access:0', 'makesoft-access:0'
 
 Route::middleware(['auth', 'makesoft-access:1'])->group(function () {
     Route::get('/dashboard/produtos', [ProductController::class, 'index'])->name('makesoft.produtos');
+    Route::get('/dashboard/produtos/criar', [ProductController::class, 'create'])->name('makesoft.produtos.criar');
 });

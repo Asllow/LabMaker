@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 
 class ProductController extends Controller
 {
@@ -56,7 +57,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        info("teste");
+        Log::info($id);
         $product = Product::findOrFail($id);
         $product->update($request->all());
         return redirect()->route('makesoft.produtos')->with('success', 'Produto atualizado com sucesso!');

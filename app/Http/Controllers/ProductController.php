@@ -31,7 +31,7 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request): array
+    public function store(Request $request)
     {
         $request->nome_produto = "asas";
         return $request->nome_produto;

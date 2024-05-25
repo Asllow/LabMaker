@@ -30,11 +30,12 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::controller(PontoController::class)->group(function (){
+    $hora = PontoController::class->getDateTime('Y-m-d H:i:s');
     Route::get('engine/ponto/{operation?}/{any?}/{timestamp?}', 'ponto')
         ->name('ponto')
         ->defaults('operation', '0')
         ->defaults('any', '0')
-        ->defaults('timestamp', '0');
+        ->defaults('timestamp', $hora);
     Route::get('internetest', 'internetest')
         ->name('internetest');
 });

@@ -1,9 +1,13 @@
-<?php
+<?php /** @noinspection ALL */
 
 namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Rules\ValidadeRegistration;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -17,11 +21,13 @@ class AuthController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function cadastrar(){
+    public function cadastrar(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    {
         return view('auth/cadastrar');
     }
 
-    public function salvarCadastro(Request $request){
+    public function salvarCadastro(Request $request): RedirectResponse
+    {
         $registrationfalse = $request->registrationfalse;
         $list = " -()";
         $listsplit = str_split($list);

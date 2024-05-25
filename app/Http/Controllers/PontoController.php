@@ -85,7 +85,7 @@ class PontoController extends Controller
         if ($results_id_maker == []) {return "Saida Registrada 1";}
         $size = sizeof($results_id_maker);
         for ($i = 0; $i < $size; $i++) {
-            $results_id_maker[$i]->update(['io' => 0])->where('registration', $results_id_maker[$i]->registration);
+            $results_id_maker[$i]->update(['io' => 0]);
             PunchClock::create([
                 'registration' => $results_id_maker[$i]->registration,
                 'io' => '0'

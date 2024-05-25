@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use App\Models\IdMaker;
 use App\Models\PunchClock;
 use App\Models\User;
-use Illuminate\Support\Facades\DB;
 use Datetime;
 
 class PontoController extends Controller
@@ -83,14 +82,9 @@ class PontoController extends Controller
     {
         $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;
         if ($results_id_maker == []) {return "Saida Registrada 1";}
-        $size = sizeof($results_id_maker);
-        $results_id_maker->each->update(['io' => 0]);
-        for ($i = 0; $i < $size; $i++) {
-            PunchClock::create([
-                'registration' => $results_id_maker[$i]->registration,
-                'io' => '0'
-            ]);
-        }
+
+        $results_id_maker->each->update(['io' => 0])->PunchClock::create(['registration' => $results_id_maker->registration, 'io' => 0]);
+
         return "Saida Registrada";
     }
     private function getDateTime(): string

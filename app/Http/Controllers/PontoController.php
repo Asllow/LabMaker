@@ -77,13 +77,15 @@ class PontoController extends Controller
         ]);
         return "Inscrito|" . $texto;
     }
+
+    /** @noinspection PhpArrayAccessOnIllegalTypeInspection */
     private function removeRemnants(): string
     {
         $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;
-        if (!$results_id_maker) {return "Saida Registrada 1";}
+        if ($results_id_maker == []) {return "Saida Registrada 1";}
         $size = sizeof($results_id_maker);
         for ($i = 0; $i < $size; $i++) {
-            DB::update('update id_maker set io = 0 where registration = ?', array($results_id_maker[$i]->registration));
+            $results_id_maker[$i]->update(['io' => 0])->where('registration', $results_id_maker[$i]->registration);
             PunchClock::create([
                 'registration' => $results_id_maker[$i]->registration,
                 'io' => '0'

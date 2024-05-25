@@ -79,9 +79,8 @@ class ProductController extends Controller
 
     private function checkNull($request)
     {
-        if ($request->nome_produto == null){
-            $response['nome_produto'] = "";
-        }
+        $response = [];
+        if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}
         return $response;
     }
 }

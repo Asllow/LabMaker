@@ -65,7 +65,7 @@ class PontoController extends Controller
                 return "Saida Registrada";
             case "5":
                 $currentDateTime = new DateTime('now');
-                return $currentDateTime;
+                return $currentDateTime->format('dmyHis');
             case "6":
                 return "!";
             default:

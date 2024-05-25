@@ -81,7 +81,7 @@ class ProductController extends Controller
         $response = [];
         if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}
         if ($request->img_produto == null){$response['img_produto'] = "";}else{$response['img_produto'] = $request->img_produto;}
-        if ($request->preco_produto == null){$response['preco_produto'] = "";}else{$response['preco_produto'] = $request->preco_produto;}
+        if ($request->preco_produto == null){$response['preco_produto'] = 0;}else{$response['preco_produto'] = $request->preco_produto;}
         if ($request->desc_produto == null){$response['desc_produto'] = "";}else{$response['desc_produto'] = $request->desc_produto;}
         if ($request->dimensao_produto == null){$response['dimensao_produto'] = "";}else{$response['dimensao_produto'] = $request->dimensao_produto;}
         return $response;

@@ -38,7 +38,7 @@ Route::controller(PontoController::class)->group(function (){
 });
 
 Route::middleware(['auth', 'maker-access:1']) or Route::middleware(['auth', 'era-access:1']) or Route::middleware(['auth', 'makesoft-access:1']) ->group(function (){
-
+    Route::get('/dashboard/ponto', 'dashboard');
 });
 
 Route::middleware(['auth', 'maker-access:0', 'era-access:0', 'makesoft-access:0'])->group(function () {

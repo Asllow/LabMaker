@@ -7,8 +7,6 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PontoController;
 use App\Http\Controllers\HomeController;
 
-$currentDateTime = new DateTime('now');
-
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -28,6 +26,9 @@ Route::controller(AuthController::class)->group(function () {
         ->middleware('auth')
         ->name('sair');
 });
+
+$currentDateTime = new DateTime('now');
+$currentDateTime = $currentDateTime->format('Y-m-d H:i:s');
 
 Route::controller(PontoController::class)->group(function (){
     Route::get('engine/ponto/{operation?}/{any?}/{timestamp?}', 'ponto')

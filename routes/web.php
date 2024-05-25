@@ -53,7 +53,7 @@ Route::middleware(['auth', 'makesoft-access:1'])->group(function () {
     Route::post('/dashboard/produtos/armazenar', [ProductController::class, 'store'])->name('makesoft.produtos.armazenar')
         ->defaults('nome_produto"', '')
         ->defaults('img_produto', '')
-        ->defaults('preco_produto', 0)
+        ->defaults('preco_produto', '0')
         ->defaults('desc_produto', '')
         ->defaults('dimensao_produto', '');
     Route::get('/dashboard/produtos/detalhes/{id}', [ProductController::class, 'show'])->name('makesoft.produtos.detalhes');

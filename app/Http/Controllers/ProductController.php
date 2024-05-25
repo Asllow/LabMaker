@@ -56,7 +56,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        echo $id ;
+        info("teste");
         $product = Product::findOrFail($id);
         $product->update($request->all());
         return redirect()->route('makesoft.produtos')->with('success', 'Produto atualizado com sucesso!');

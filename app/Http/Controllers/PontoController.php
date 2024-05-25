@@ -32,7 +32,7 @@ class PontoController extends Controller
                 return $results_id_maker->registration . $results_user ->name . " " . $results_user ->last_name;
             case "3":
                 $this->checkAny($any);
-                $results_id_maker = IdMaker::firstWhere('registration', $registrations) ?? 0;
+                $results_id_maker = IdMaker::firstWhere('registration', $any) ?? 0;
                 if (!$results_id_maker) {return 'Erro 4';}
                 $io = match ($results_id_maker->io) {
                     0 => 1,

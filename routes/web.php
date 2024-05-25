@@ -50,12 +50,7 @@ Route::middleware(['auth', 'maker-access:0', 'era-access:0', 'makesoft-access:0'
 Route::middleware(['auth', 'makesoft-access:1'])->group(function () {
     Route::get('/dashboard/produtos', [ProductController::class, 'index'])->name('makesoft.produtos');
     Route::get('/dashboard/produtos/criar', [ProductController::class, 'create'])->name('makesoft.produtos.criar');
-    Route::post('/dashboard/produtos/armazenar', [ProductController::class, 'store'])->name('makesoft.produtos.armazenar')
-        ->defaults('nome_produto"', '')
-        ->defaults('img_produto', '')
-        ->defaults('preco_produto', '0')
-        ->defaults('desc_produto', '')
-        ->defaults('dimensao_produto', '');
+    Route::post('/dashboard/produtos/armazenar', [ProductController::class, 'store'])->name('makesoft.produtos.armazenar');
     Route::get('/dashboard/produtos/detalhes/{id}', [ProductController::class, 'show'])->name('makesoft.produtos.detalhes');
     Route::get('/dashboard/produtos/editar/{id}', [ProductController::class, 'edit'])->name('makesoft.produtos.editar');
     Route::put('/dashboard/produtos/editar/{id}', [ProductController::class, 'update'])->name('makesoft.produtos.atualizar');

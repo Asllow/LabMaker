@@ -30,7 +30,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        Log::info('Showing the user profile for user: {id}', ['id' => $request]);
+        Log::info('Showing the user profile for user');
         Product::create($request->all());
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }

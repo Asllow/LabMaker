@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class PontoController extends Controller
 {
+    public function index()
+    {
+        return "teste";
+    }
     public function ponto(string $id, string $any, string $timestamp){
         if ($id == "0"){
             return abort(404);
@@ -21,7 +25,7 @@ class PontoController extends Controller
                 if (!$results){return 'Erro 1';}
                 return $results->registration . $results->name . " " . $results->last_name;
             }
-            
+
         }
         elseif ($id == "2"){
             if ($any == "0"){
@@ -100,7 +104,7 @@ class PontoController extends Controller
                 $results = DB::select('select name, last_name from users where registration = ?', array($matriz2[$i]->registration))[0];
                 $matriz3[$i] = $results;
             }
-            
+
             return dd($matriz3, $matriz2);
         }
         else {

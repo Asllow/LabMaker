@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Product;
 use App\Models\PunchClock;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Datetime;
 
@@ -23,7 +25,7 @@ class PontoController extends Controller
             if ($any == "0"){
                 abort(404);
             }else {
-                $results = DB::select('select registration, name, last_name from users where registration = ?', array($any))[0] ?? 0;
+                $results = User::where('registration', $any) ?? 0;
                 if (!$results){return 'Erro 1';}
                 return $results->registration . $results->name . " " . $results->last_name;
             }
@@ -76,38 +78,15 @@ class PontoController extends Controller
             }
             return "Saida Registrada";
         }
+        //return to ESP the datetime
         elseif ($id == "5"){
             $currentDateTime = new DateTime('now');
             $currentDateTime = $currentDateTime->format('dmyHis');
             return $currentDateTime;
         }
+        //check the internet
         elseif ($id == "6"){
             return "!";
-        }
-        elseif ($id == "99"){
-            $registrations = DB::select('select registration from id_maker') ?? 0;
-            array_multisort(array_column($registrations, 'registration'), SORT_ASC, $registrations);
-            $registrations2 = DB::select('select registration from users') ?? 0;
-            array_multisort(array_column($registrations2, 'registration'), SORT_ASC, $registrations2);
-            $size = sizeof($registrations);
-            for ($i = 0; $i < $size; $i++){
-                $matriz[$i] = $registrations[$i]->registration;
-            }
-            $matriz2 = array();
-            for ($i = 0; $i < $size; $i++){
-                if (in_array($registrations2[$i]->registration, $matriz)){
-                }else{
-                    $matriz2[] = $registrations2[$i];
-                }
-            }
-            if (!$matriz2){return 'Erro 7';}
-            $size2 = sizeof($matriz2);
-            for ($i = 0; $i < $size2; $i++){
-                $results = DB::select('select name, last_name from users where registration = ?', array($matriz2[$i]->registration))[0];
-                $matriz3[$i] = $results;
-            }
-
-            dd($matriz3, $matriz2);
         }
         else {
             abort(404);

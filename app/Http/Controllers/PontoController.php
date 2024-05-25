@@ -80,14 +80,12 @@ class PontoController extends Controller
     private function removeRemnants(): string
     {
         $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;
-        if (!$results_id_maker) {
-            return "Saida Registrada 1";
-        }
+        if (!$results_id_maker) {return "Saida Registrada 1";}
         $size = sizeof($results_id_maker);
         for ($i = 0; $i < $size; $i++) {
-            DB::update('update id_maker set io = 0 where registration = ?', array($registrations[$i]->registration));
+            DB::update('update id_maker set io = 0 where registration = ?', array($results_id_maker[$i]->registration));
             PunchClock::create([
-                'registration' => $registrations[$i]->registration,
+                'registration' => $results_id_maker[$i]->registration,
                 'io' => '0'
             ]);
         }

@@ -1,4 +1,4 @@
-<?php /** @noinspection ALL */
+<?php
 
 namespace App\Http\Controllers;
 use App\Models\PunchClock;
@@ -22,7 +22,7 @@ class PontoController extends Controller
             if ($any == "0"){
                 abort(404);
             }else {
-                $results = User::find('1') ?? 0;
+                $results = User::where('registration', $any) ?? 0;
                 if (!$results){return 'Erro 1';}
                 return $any;
             }
@@ -78,8 +78,7 @@ class PontoController extends Controller
         //return to ESP the datetime
         elseif ($id == "5"){
             $currentDateTime = new DateTime('now');
-            $currentDateTime = $currentDateTime->format('dmyHis');
-            return $currentDateTime;
+            return $currentDateTime->format('dmyHis');
         }
         //check the internet
         elseif ($id == "6"){

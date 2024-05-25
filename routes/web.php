@@ -37,7 +37,7 @@ Route::controller(PontoController::class)->group(function (){
         ->name('internetest');
 });
 
-Route::middleware(['auth', 'general-access:1'])->group(function () {
+Route::middleware(['auth', 'all_access:1'])->group(function () {
     Route::get('/dashboard/ponto', [PontoController::class, 'index'])->name('dashboard.ponto');
 });
 

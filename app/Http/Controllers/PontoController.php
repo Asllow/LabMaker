@@ -35,9 +35,9 @@ class PontoController extends Controller
             }else {
                 $registration = IdMaker::firstWhere('hexa_id', $any) ?? 0;
                 if (!$registration){return 'Erro 2';}
-                $results = User::firstWhere('registration', $registration) ?? 0;
+                $results = User::firstWhere('registration', $registration->registration) ?? 0;
                 if (!$results){return 'Erro 3';}
-                return $registration->id . $results->name . " " . $results->last_name;
+                return $registration->registration . $results->name . " " . $results->last_name;
             }
         }
         elseif ($id == "3"){

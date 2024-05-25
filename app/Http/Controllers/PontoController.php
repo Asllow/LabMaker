@@ -30,15 +30,12 @@ class PontoController extends Controller
 
         }
         elseif ($id == "2"){
-            if ($any == "0"){
-                abort(404);
-            }else {
-                $registration = IdMaker::firstWhere('hexa_id', $any) ?? 0;
-                if (!$registration){return 'Erro 2';}
-                $results = User::firstWhere('registration', $registration->registration) ?? 0;
-                if (!$results){return 'Erro 3';}
-                return $registration->registration . $results->name . " " . $results->last_name;
-            }
+            $this->checkAny($any);
+            $registration = IdMaker::firstWhere('hexa_id', $any) ?? 0;
+            if (!$registration){return 'Erro 2';}
+            $results = User::firstWhere('registration', $registration->registration) ?? 0;
+            if (!$results){return 'Erro 3';}
+            return $registration->registration . $results->name . " " . $results->last_name;
         }
         elseif ($id == "3"){
             if ($any == "0"){
@@ -86,6 +83,12 @@ class PontoController extends Controller
             return "!";
         }
         else {
+            abort(404);
+        }
+    }
+    private function checkAny($any): void
+    {
+        if ($any == "0"){
             abort(404);
         }
     }

@@ -8,6 +8,7 @@ use App\Http\Controllers\PontoController;
 use App\Http\Controllers\HomeController;
 
 $currentDateTime = new DateTime('now');
+$currentDateTime = $currentDateTime->format('dmyHis');
 
 Route::get('/', function () {
     return view('welcome');

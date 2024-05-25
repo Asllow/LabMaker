@@ -10,7 +10,7 @@ class PontoController extends Controller
 {
     public function index(): string
     {
-        return "teste";
+        return view('ponto.index');
     }
 
     public function ponto(string $id, string $any, string $timestamp)
@@ -76,6 +76,8 @@ class PontoController extends Controller
         ]);
         return "Inscrito|" . $texto;
     }
+
+    /** @noinspection PhpArrayAccessOnIllegalTypeInspection */
     private function removeRemnants(): string
     {
         $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;

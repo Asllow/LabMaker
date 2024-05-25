@@ -20,21 +20,21 @@ class PontoController extends Controller
         switch ($id) {
             case "1":
                 $this->checkAny($any);
-                $results = User::firstWhere('registration', $any) ?? 0;
-                if (!$results) {return 'Erro 1';}
-                return $results->registration . $results->name . " " . $results->last_name;
+                $results_user = User::firstWhere('registration', $any) ?? 0;
+                if (!$results_user) {return 'Erro 1';}
+                return $results_user->registration . $results_user->name . " " . $results_user->last_name;
             case "2":
                 $this->checkAny($any);
-                $registration = IdMaker::firstWhere('hexa_id', $any) ?? 0;
-                if (!$registration) {return 'Erro 2';}
-                $results = User::firstWhere('registration', $registration->registration) ?? 0;
-                if (!$results) {return 'Erro 3';}
-                return $registration->registration . $results->name . " " . $results->last_name;
+                $results_id_maker = IdMaker::firstWhere('hexa_id', $any) ?? 0;
+                if (!$results_id_maker) {return 'Erro 2';}
+                $results_user = User::firstWhere('registration', $results_id_maker->registration) ?? 0;
+                if (!$results_user ) {return 'Erro 3';}
+                return $results_id_maker->registration . $results_user ->name . " " . $results_user ->last_name;
             case "3":
                 $this->checkAny($any);
-                $io = DB::select('select io from id_maker where registration = ?', array($any))[0] ?? 0;
-                if (!$io) {return 'Erro 4';}
-                $io = match ($io->io) {
+                $results_id_maker = IdMaker::firstWhere('registration', $registrations) ?? 0;
+                if (!$results_id_maker) {return 'Erro 4';}
+                $io = match ($results_id_maker->io) {
                     0 => 1,
                     1 => 0,
                 };

@@ -70,6 +70,12 @@ class Kernel extends HttpKernel
             ThrottleRequests::class.':api',
             SubstituteBindings::class,
         ],
+
+        'all_access' => [
+            MakerAccess::class,
+            ERAAccess::class,
+            MakeSoftAccess::class,
+        ],
     ];
 
     /**
@@ -94,11 +100,6 @@ class Kernel extends HttpKernel
     ];
 
     protected $routeMiddleware = [
-        'all_access' => [
-            'maker-access' => MakerAccess::class,
-            'era-access' => ERAAccess::class,
-            'makesoft-access' => MakeSoftAccess::class,
-        ],
         'general-access' => GeneralAccess::class,
         'maker-access' => MakerAccess::class,
         'era-access' => ERAAccess::class,

@@ -31,6 +31,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $request = $this->checkNull($request);
+        return $request;
         Product::create($request->all());
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }

@@ -34,7 +34,7 @@ Route::controller(PontoController::class)->group(function (){
         ->name('ponto')
         ->defaults('operation', '0')
         ->defaults('any', '0')
-        ->defaults('timestamp', PontoController::class->getDateTime('Y-m-d H:i:s'));
+        ->defaults('timestamp', PontoController::class->getDateTime('ymd'));
     Route::get('internetest', 'internetest')
         ->name('internetest');
 });

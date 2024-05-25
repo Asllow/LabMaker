@@ -79,10 +79,11 @@ class PontoController extends Controller
     }
     private function removeRemnants(): string
     {
-        $registrations = DB::select('select registration from id_maker where io = 1') ?? 0;
-        if (!$registrations) {
+        $results_id_maker = IdMaker::where('io', 1) ?? 0;
+        if (!$results_id_maker) {
             return "Saida Registrada 1";
         }
+        return $results_id_maker;
         $size = sizeof($registrations);
         for ($i = 0; $i < $size; $i++) {
             DB::update('update id_maker set io = 0 where registration = ?', array($registrations[$i]->registration));

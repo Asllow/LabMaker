@@ -5,6 +5,7 @@ namespace App\Http;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\EncryptCookies;
 use App\Http\Middleware\ERAAccess;
+use App\Http\Middleware\GeneralAccess;
 use App\Http\Middleware\MakerAccess;
 use App\Http\Middleware\MakeSoftAccess;
 use App\Http\Middleware\PreventRequestsDuringMaintenance;
@@ -69,6 +70,12 @@ class Kernel extends HttpKernel
             ThrottleRequests::class.':api',
             SubstituteBindings::class,
         ],
+
+        'all_access' => [
+            'maker-access' => MakerAccess::class,
+            'era-access' => ERAAccess::class,
+            'makesoft-access' => MakeSoftAccess::class,
+        ],
     ];
 
     /**
@@ -93,6 +100,7 @@ class Kernel extends HttpKernel
     ];
 
     protected $routeMiddleware = [
+        'general-access' => GeneralAccess::class,
         'maker-access' => MakerAccess::class,
         'era-access' => ERAAccess::class,
         'makesoft-access' => MakeSoftAccess::class,

@@ -9,17 +9,19 @@ use Illuminate\Http\Request;
 
 class PontoController extends Controller
 {
-    public function index()
+    public function index(): string
     {
         return "teste";
     }
-    public function ponto(string $id, string $any, string $timestamp){
+
+    public function ponto(string $id, string $any, string $timestamp)
+    {
         if ($id == "0"){
-            return abort(404);
+            abort(404);
         }
         elseif ($id == "1"){
             if ($any == "0"){
-                return abort(404);
+                abort(404);
             }else {
                 $results = DB::select('select registration, name, last_name from users where registration = ?', array($any))[0] ?? 0;
                 if (!$results){return 'Erro 1';}
@@ -29,7 +31,7 @@ class PontoController extends Controller
         }
         elseif ($id == "2"){
             if ($any == "0"){
-                return abort(404);
+                abort(404);
             }else {
                 $registration = DB::select('select registration from id_maker where hexa_id = ?', array($any))[0]->registration ?? 0;
                 if (!$registration){return 'Erro 2';}
@@ -40,7 +42,7 @@ class PontoController extends Controller
         }
         elseif ($id == "3"){
             if ($any == "0"){
-                return abort(404);
+                abort(404);
             }else {
                 $io = DB::select('select io from id_maker where registration = ?', array($any))[0] ?? 0;
                 if (!$io){return 'Erro 4';}
@@ -95,7 +97,7 @@ class PontoController extends Controller
             for ($i = 0; $i < $size; $i++){
                 if (in_array($registrations2[$i]->registration, $matriz)){
                 }else{
-                    array_push($matriz2, $registrations2[$i]);
+                    $matriz2[] = $registrations2[$i];
                 }
             }
             if (!$matriz2){return 'Erro 7';}
@@ -105,10 +107,10 @@ class PontoController extends Controller
                 $matriz3[$i] = $results;
             }
 
-            return dd($matriz3, $matriz2);
+            dd($matriz3, $matriz2);
         }
         else {
-            return abort(404);
+            abort(404);
         }
     }
 }

@@ -7,6 +7,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PontoController;
 use App\Http\Controllers\HomeController;
 
+$currentDateTime = new DateTime('now');
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');

@@ -64,8 +64,7 @@ class PontoController extends Controller
                 }
                 return "Saida Registrada";
             case "5":
-                $currentDateTime = new DateTime('now');
-                return $currentDateTime->format('dmyHis');
+                return $this->getDateTime();
             case "6":
                 return "!";
             default:
@@ -77,5 +76,11 @@ class PontoController extends Controller
         if ($any == "0"){
             abort(404);
         }
+    }
+
+    public function getDateTime(): string
+    {
+        $currentDateTime = new DateTime('now');
+        return $currentDateTime->format('dmyHis') . "asas";
     }
 }

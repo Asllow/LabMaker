@@ -94,11 +94,6 @@ class Kernel extends HttpKernel
     ];
 
     protected $routeMiddleware = [
-        'all_access' => [
-            MakerAccess::class,
-            ERAAccess::class,
-            MakeSoftAccess::class,
-        ],
         'general-access' => GeneralAccess::class,
         'maker-access' => MakerAccess::class,
         'era-access' => ERAAccess::class,

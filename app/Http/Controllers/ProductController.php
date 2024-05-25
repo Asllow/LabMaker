@@ -57,7 +57,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        Log::info("teste");
+        Log::info('Showing the user profile for user: {id}', ['id' => $id]);
         $product = Product::findOrFail($id);
         $product->update($request->all());
         return redirect()->route('makesoft.produtos')->with('success', 'Produto atualizado com sucesso!');

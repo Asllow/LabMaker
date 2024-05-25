@@ -27,10 +27,9 @@ Route::controller(AuthController::class)->group(function () {
         ->name('sair');
 });
 
-$currentDateTime = new DateTime('now');
-$currentDateTime = $currentDateTime->format('Y-m-d H:i:s');
-
 Route::controller(PontoController::class)->group(function (){
+    $currentDateTime = new DateTime('now');
+    $currentDateTime = $currentDateTime->format('Y-m-d H:i:s');
     Route::get('engine/ponto/{operation?}/{any?}/{timestamp?}', 'ponto')
         ->name('ponto')
         ->defaults('operation', '0')

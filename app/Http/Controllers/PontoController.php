@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\IdMaker;
 use App\Models\PunchClock;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
@@ -32,11 +33,11 @@ class PontoController extends Controller
             if ($any == "0"){
                 abort(404);
             }else {
-                $registration = DB::select('select registration from id_maker where hexa_id = ?', array($any))[0]->registration ?? 0;
+                $registration = IdMaker::firstWhere('hexa_id', $any) ?? 0;
                 if (!$registration){return 'Erro 2';}
-                $results = DB::select('select name, last_name from users where registration = ?', array($registration))[0];
+                $results = User::firstWhere('registration', $registration) ?? 0;
                 if (!$results){return 'Erro 3';}
-                return $registration . $results->name . " " . $results->last_name;
+                return $registration->id . $results->name . " " . $results->last_name;
             }
         }
         elseif ($id == "3"){

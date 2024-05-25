@@ -1,13 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
 use App\Models\PunchClock;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Datetime;
-
-use Illuminate\Http\Request;
 
 class PontoController extends Controller
 {
@@ -25,9 +22,9 @@ class PontoController extends Controller
             if ($any == "0"){
                 abort(404);
             }else {
-                $results = User::where('registration', $any) ?? 0;
+                $results = User::find('1') ?? 0;
                 if (!$results){return 'Erro 1';}
-                return $results->registration;
+                return $results->registration . $results->name . " " . $results->last_name;
             }
 
         }

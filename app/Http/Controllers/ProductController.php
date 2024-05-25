@@ -77,11 +77,10 @@ class ProductController extends Controller
         return redirect()->route('makesoft.produtos')->with('success', 'Produto apagado com sucesso!');
     }
 
-
     private function checkNull($request)
     {
         if ($request->nome_produto == null){
-            $response->nome_produto = "";
+            $response['nome_produto'] = "";
         }
         return $response;
     }

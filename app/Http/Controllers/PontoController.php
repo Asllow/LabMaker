@@ -79,7 +79,7 @@ class PontoController extends Controller
     }
     private function removeRemnants(): string
     {
-        $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;
+        $results_id_maker = IdMaker::where('io', 1)->get()->items ?? 0;
         if (!$results_id_maker) {
             return "Saida Registrada 1";
         }

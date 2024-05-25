@@ -33,7 +33,7 @@ class ProductController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $response = $this->checkNull($request, 0);
+        $response = $this->checkNull($request);
         Product::create($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
@@ -61,7 +61,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, string $id): RedirectResponse
     {
-        $response = $this->checkNull($request, 1);
+        $response = $this->checkNull($request);
         $product = Product::findOrFail($id);
         $product->update($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto atualizado com sucesso!');
@@ -77,7 +77,7 @@ class ProductController extends Controller
         return redirect()->route('makesoft.produtos')->with('success', 'Produto apagado com sucesso!');
     }
 
-    private function checkNull($request, $io): array
+    private function checkNull($request): array
     {
         $response = [];
         if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}

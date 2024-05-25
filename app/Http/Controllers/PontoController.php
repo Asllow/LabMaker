@@ -42,7 +42,7 @@ class PontoController extends Controller
                     0 => "Saida",
                     1 => "Entrada",
                 };
-                DB::update('update id_maker set io = ? where registration = ?', array($io, $any));
+                $results_id_maker->update(['io' => $io]);
                 PunchClock::create([
                     'registration' => $any,
                     'io' => $io,

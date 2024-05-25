@@ -78,7 +78,7 @@ class PontoController extends Controller
         }
     }
 
-    public function getDateTime(string $format): string
+    public function getDateTime(string $format)
     {
         $currentDateTime = new DateTime('now');
         return $currentDateTime->format($format);

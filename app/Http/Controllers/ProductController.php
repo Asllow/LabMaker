@@ -79,11 +79,6 @@ class ProductController extends Controller
 
     private function checkNull($request, $io): array
     {
-        if ($io == 1) {
-            $currentDateTime = new DateTime('now');
-            $currentDateTime = $currentDateTime->format('Y-m-d H:i:s');
-            $response['updated_at'] = $currentDateTime;
-        }
         $response = [];
         if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}
         if ($request->img_produto == null){$response['img_produto'] = "";}else{$response['img_produto'] = $request->img_produto;}

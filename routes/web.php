@@ -8,7 +8,6 @@ use App\Http\Controllers\PontoController;
 use App\Http\Controllers\HomeController;
 
 $currentDateTime = new DateTime('now');
-$currentDateTime = $currentDateTime->format('Y-m-d H:i:s');
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,7 +34,7 @@ Route::controller(PontoController::class)->group(function (){
         ->name('ponto')
         ->defaults('operation', '0')
         ->defaults('any', '0')
-        ->defaults('timestamp', $currentDateTime);
+        ->defaults('timestamp', '0');
     Route::get('internetest', 'internetest')
         ->name('internetest');
 });

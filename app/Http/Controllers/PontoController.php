@@ -83,8 +83,7 @@ class PontoController extends Controller
         if (!$results_id_maker) {
             return "Saida Registrada 1";
         }
-        return $results_id_maker[0]->registration;
-        $size = sizeof($registrations);
+        $size = sizeof($results_id_maker);
         for ($i = 0; $i < $size; $i++) {
             DB::update('update id_maker set io = 0 where registration = ?', array($registrations[$i]->registration));
             PunchClock::create([

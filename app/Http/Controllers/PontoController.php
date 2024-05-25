@@ -64,7 +64,7 @@ class PontoController extends Controller
                 }
                 return "Saida Registrada";
             case "5":
-                return $this->getDateTime('dmyHis');
+                return $this->getDateTime('Y-m-d H:i:s');
             case "6":
                 return "!";
             default:

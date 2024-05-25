@@ -31,11 +31,10 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $response = $this->checkNull($request);
-        return $request;
-        Product::create();
+        Product::create($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
 
@@ -77,11 +76,14 @@ class ProductController extends Controller
         return redirect()->route('makesoft.produtos')->with('success', 'Produto apagado com sucesso!');
     }
 
-    private function checkNull($request)
+    private function checkNull($request): array
     {
         $response = [];
         if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}
-        if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}
+        if ($request->img_produto == null){$response['img_produto'] = "";}else{$response['img_produto'] = $request->img_produto;}
+        if ($request->preco_produto == null){$response['preco_produto'] = "";}else{$response['preco_produto'] = $request->preco_produto;}
+        if ($request->desc_produto == null){$response['desc_produto'] = "";}else{$response['desc_produto'] = $request->desc_produto;}
+        if ($request->dimensao_produto == null){$response['dimensao_produto'] = "";}else{$response['dimensao_produto'] = $request->dimensao_produto;}
         return $response;
     }
 }

@@ -22,7 +22,7 @@ class PontoController extends Controller
             if ($any == "0"){
                 abort(404);
             }else {
-                $results = User::select('*')->where('registration', $any)->get() ?? 0;
+                $results = User::find(3) ?? 0;
                 if (!$results){return 'Erro 1';}
                 return $results->name;
             }

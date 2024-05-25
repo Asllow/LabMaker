@@ -35,7 +35,7 @@ Route::controller(PontoController::class)->group(function (){
         ->name('ponto')
         ->defaults('operation', '0')
         ->defaults('any', '0')
-        ->defaults('timestamp', '0');
+        ->defaults('timestamp', $currentDateTime);
     Route::get('internetest', 'internetest')
         ->name('internetest');
 });

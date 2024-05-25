@@ -35,7 +35,7 @@ class PontoController extends Controller
             if (!$registration){return 'Erro 2';}
             $results = User::firstWhere('registration', $registration->registration) ?? 0;
             if (!$results){return 'Erro 3';}
-            return $registration->registration . $results->name . " " . $results->last_name;
+            return $registration->registration . $results->name . " asd" . $results->last_name;
         }
         elseif ($id == "3"){
             if ($any == "0"){

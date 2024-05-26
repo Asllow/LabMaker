@@ -87,7 +87,7 @@ class PontoController extends Controller
                 'io' => '0'
             ]);
         }
-        return "Saida Registrada";
+        return count($results_id_maker);
     }
     private function getDateTime(): string
     {

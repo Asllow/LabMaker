@@ -79,7 +79,11 @@ class PontoController extends Controller
     private function removeRemnants(): string
     {
         $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;
-        if (!$results_id_maker) {return "Erro 5";}
+        if (!$results_id_maker) {
+            return "Erro 5";
+        }elseif (count($results_id_maker)==0){
+            return "Usuarios Ausentes";
+        }
         foreach ($results_id_maker as $results) {
             $results->update(['io' => 0]);
             PunchClock::create([
@@ -87,7 +91,7 @@ class PontoController extends Controller
                 'io' => '0'
             ]);
         }
-        return count($results_id_maker);
+        return "Saida Registrada";
     }
     private function getDateTime(): string
     {

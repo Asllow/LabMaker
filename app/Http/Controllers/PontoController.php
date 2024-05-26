@@ -106,10 +106,12 @@ class PontoController extends Controller
         if (!$results_id_maker) {
             return "Erro 5";
         }
-        $results = [];
+        $results_all = [];
         foreach ($results_id_maker as $results) {
             $results_user = User::firstWhere('registration', $results->registration) ?? 0;
-            $results[$results->registration] = $results_user ;
+            if (count($results_user)==0){
+                array_push($results_all, $results->registration);
+            }
         }
         return $results;
     }

@@ -29,6 +29,8 @@ class PontoController extends Controller
                 return $this->getDateTime();
             case "6":
                 return "!";
+            case "7":
+                dd($this->returnDifferencesinIdMaker());
             default:
                 abort(404);
         }
@@ -97,5 +99,18 @@ class PontoController extends Controller
     {
         $currentDateTime = new DateTime('now');
         return $currentDateTime->format('dmyHis');
+    }
+    private function returnDifferencesInIdMaker(): string
+    {
+        $results_id_maker = IdMaker::where('active', 1)->get() ?? 0;
+        if (!$results_id_maker) {
+            return "Erro 5";
+        }
+        $results = [];
+        foreach ($results_id_maker as $results) {
+            $results_user = User::firstWhere('registration', $results->registration) ?? 0;
+            $results[$results->registration] = $results_user ;
+        }
+        return $results;
     }
 }

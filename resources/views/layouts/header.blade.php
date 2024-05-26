@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="@yield('description')">
         <title>@yield('title')</title>
-        <link href="{{ asset('assets/css/app.css') }}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/app.css') }}" >
     </head>
     <body>
         <header>

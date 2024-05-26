@@ -7,5 +7,7 @@
         <meta name="description" content="@yield('description')">
         <title>@yield('title')</title>
     </head>
-    <body>@yield('main')</body>
+    <body>
+        @yield('main')
+    </body>
 </html>

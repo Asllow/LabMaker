@@ -8,5 +8,5 @@
         <meta name="author" content="">
         <title>@yield('title')</title>
     </head>
-    <body></body>
+    <body>@yield('main')</body>
 </html>

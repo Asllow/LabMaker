@@ -16,6 +16,8 @@ return new class extends Migration
             $table->bigInteger('registration')->unsigned()->nullable();
             $table->string('hexa_id');
             $table->boolean('io');
+            $table->boolean('active')->default(true);
+            $table->boolean('absent')->default(false);
             $table->timestamps();
         });
     }

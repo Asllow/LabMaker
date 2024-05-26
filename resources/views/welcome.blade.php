@@ -2,6 +2,8 @@
 
 @section('title', 'LabMaker')
 
+@section('description', 'Bem vindo ao site do Laboratório Maker, CEFET-MG campus V')
+
 @section('main')
     <main>
         <section>

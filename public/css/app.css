@@ -193,6 +193,7 @@ div.background{
 div ul a.logo {
     position: absolute;
     bottom: 5rem;
+    margin-left: -2rem;
 }
 nav .bi-person-circle{
     color: var(--title-color);
@@ -318,6 +319,9 @@ nav.show div.bi-x {
     :root {
         --title-font-size: 2rem;
         --subtitle-font-size: 1.125rem;
+    }
+    div ul a.logo {
+        margin-left: 0;
     }
 }
 /* Responsive PC */

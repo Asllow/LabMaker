@@ -1,3 +1,51 @@
+/*************** RESET ***************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
 a {
     text-decoration: none;
+    color: var(--base-color);
+}
+img {
+    width: 100%;
+    height: auto;
+}
+/*************** VARIABLES ***************/
+:root {
+    --header-height: 4.5rem;
+    /* HSL color mode */
+    --hue: 38;
+    --base-color: hsl(38, 94%, 59%);
+    --base-color-second: hsl(38, 22%, 83%);
+    --base-color-alt: hsl(50, 100%, 50%);
+    --title-color: #0e0f34;
+    --text-color: hsl(0, 0%, 46%);
+    --text-color-light: hsl(0, 0%, 100%);
+    --body-color: hsl(0, 0%, 100%);
+    /*fonts*/
+    --title-font-size: 1.5rem;
+    --subtitle-font-size: 1rem;
+    --title-font: 'Poppins', sans-serif;
+    --body-font: 'DM Sans', sans-serif;
+    --font-size: 1rem;
+}
+/*************** BASE ***************/
+html {
+    font-size: 75%;
+}
+
+@media screen and (min-width: 720px) {
+    html {
+        font-size: 81.25%;
+    }
+}
+@media screen and (min-width: 1080px) {
+    html {
+        font-size: 87.5%;
+    }
 }

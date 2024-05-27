@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="@yield('description')">
         <title>@yield('title')</title>
-        <link href="{{asset("public/css/app.css")}}" rel="stylesheet" />
+        <link href="{{asset("css/app.css")}}" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <header>
@@ -22,5 +22,6 @@
             </nav>
         </header>
         @yield('main')
+        <script type="text/javascript" src="{{asset("js/app.js")}}"></script>
     </body>
 </html>

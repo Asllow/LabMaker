@@ -321,7 +321,7 @@ nav.show div.bi-x {
         --subtitle-font-size: 1.125rem;
     }
     div ul a.logo {
-        margin-left: 0;
+        margin-left: -0.75rem;
     }
 }
 /* Responsive PC */

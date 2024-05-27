@@ -19,8 +19,7 @@
             <nav class="container">
                 <div class="maker_logo">
                     <a href="{{route('welcome')}}">
-                        <strong class="text_icon_1">Lab</strong>
-                        <strong class="text_icon_2">Maker</strong>
+                        <strong class="text_icon_1">Lab<text class="text_icon_2">Maker</text></strong>
                     </a>
                 </div>
                 <div></div>

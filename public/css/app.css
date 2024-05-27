@@ -337,13 +337,13 @@ nav.show div.bi-x {
 }
 @media screen and (min-width: 720px) and (max-height: 700px) {
     div.triangulo{
-        border-bottom: 10.5rem solid transparent;
+        border-bottom: 9.5rem solid transparent;
     }
     div.background{
-        border-bottom: 13rem solid var(--body-color);
+        border-bottom: 12rem solid var(--body-color);
     }
     nav.show .menu ul {
-        margin-top: 6rem;
+        margin-top: 5rem;
     }
 }
 /* Responsive PC */

@@ -324,7 +324,7 @@ nav.show div.bi-x {
         margin-left: -1rem;
     }
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 550px) {
     div.triangulo{
         display: none;
     }
@@ -333,6 +333,9 @@ nav.show div.bi-x {
     }
     div ul a.logo {
         display: none;
+    }
+    nav.show .menu ul {
+        margin-top: 0;
     }
 }
 @media screen and (max-height: 800px) {

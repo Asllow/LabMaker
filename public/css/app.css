@@ -18,8 +18,6 @@ img {
 /*************** VARIABLES ***************/
 :root {
     --header-height: 4.5rem;
-    /* HSL color mode */
-    --hue: 38;
     --base-color: hsl(38, 94%, 59%);
     --base-color-second: hsl(38, 22%, 83%);
     --base-color-alt: hsl(50, 100%, 50%);
@@ -27,7 +25,6 @@ img {
     --text-color: hsl(0, 0%, 46%);
     --text-color-light: hsl(0, 0%, 100%);
     --body-color: hsl(0, 0%, 100%);
-    /*fonts*/
     --title-font-size: 1.5rem;
     --subtitle-font-size: 1rem;
     --title-font: 'Poppins', sans-serif;

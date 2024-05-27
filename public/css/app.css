@@ -328,6 +328,9 @@ nav.show div.bi-x {
     div.triangulo{
         display: none;
     }
+    div.background{
+        display: none;
+    }
     div ul a.logo {
         display: none;
     }

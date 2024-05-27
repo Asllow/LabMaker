@@ -29,7 +29,6 @@
                     </a>
                 </div>
                 <div>
-                    <button class="button">Teste</button>
                 </div>
             </nav>
         </header>

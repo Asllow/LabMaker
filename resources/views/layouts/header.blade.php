@@ -22,12 +22,10 @@
     <body>
         <header id='header'>
             <nav class="container">
-                <div class="logo">
-                    <a href="{{route('welcome')}}">
-                        <img src="{{asset("img/icons/labmaker_lampada.svg")}}" alt="Logo">
-                        <text class="text_icon">Lab<strong class="text_icon text_icon2">Maker</strong></text>
-                    </a>
-                </div>
+                <a class="logo" href="{{route('welcome')}}">
+                    <img src="{{asset("img/icons/labmaker_lampada.svg")}}" alt="Logo">
+                    <text class="text_icon">Lab<strong class="text_icon text_icon2">Maker</strong></text>
+                </a>
                 <div class='menu'>
                     <ul class='grid'>
                         <a class='bi bi-person-circle' href=''></a>

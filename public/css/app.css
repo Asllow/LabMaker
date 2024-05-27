@@ -335,7 +335,7 @@ nav.show div.bi-x {
         display: none;
     }
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 600px) {
     div.triangulo{
         border-bottom: 10.5rem solid transparent;
     }

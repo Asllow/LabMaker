@@ -20,16 +20,36 @@
 
     </head>
     <body>
-        <header class="header">
+        <header id='header'>
             <nav class="container">
-                <div class="maker_logo">
+                <div class="logo">
                     <a href="{{route('welcome')}}">
                         <img src="{{asset("img/icons/labmaker_lampada.svg")}}" alt="Logo">
-                        <strong class="text_icon">Lab<text class="text_icon text_icon2">Maker</text></strong>
+                        <text class="text_icon">Lab<strong class="text_icon text_icon2">Maker</strong></text>
                     </a>
                 </div>
-                <div>
+                <div class='menu'>
+                    <ul class='grid'>
+                        <a class='bi bi-person-circle' href=''></a>
+                        <li><a class='title' id='disabled' href='{{route('dashboard')}}'>Dashboard</a></li>
+                        <li><a class='title' id='index' href='{{route('welcome')}}'>Início</a></li>
+                        <li><a class='title' id='era' href=''>E.R.A</a></li>
+                        <li><a class='title' id='noticias' href=''>Notícias</a></li>
+                        <li><a class='title' id='entrar' href=''>Entrar</a></li>
+                        <a href='' class='perfil' id='disabled'>
+                            <h2 class='title'> A </h2>
+                            <h2 class='subtitle'>Arthur Miranda</h2>
+                        </a>
+                        <div class='triangulo'></div>
+                        <div class='background'></div>
+                        <a class='logo' href='{{route('welcome')}}'>
+                            <img src='{{asset("img/icons/labmaker_lampada.svg")}}' alt="Logo">
+                            <text>Lab<strong>Maker</strong></text>
+                        </a>
+                    </ul>
                 </div>
+                <div class='toggle bi bi-list'></div>
+                <div class='toggle bi bi-x'></div>
             </nav>
         </header>
         @yield('main')

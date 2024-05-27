@@ -1,4 +1,4 @@
-/*************** RESET ***************/
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ img {
     width: 100%;
     height: auto;
 }
-/*************** VARIABLES ***************/
+/* Variables */
 :root {
     --header-height: 4.5rem;
     --base-color: hsl(38, 94%, 59%);
@@ -31,9 +31,10 @@ img {
     --body-font: 'DM Sans', sans-serif;
     --font-size: 1rem;
 }
-/*************** BASE ***************/
+/* Base */
 html {
-    font-size: 75%;
+    /* 6.25% */
+    font-size: 81.25%;
     scroll-behavior: smooth;
 }
 body {
@@ -62,14 +63,15 @@ body {
         background: var(--base-color-alt);
     }
 }
-
+/* Responsive  Tablet */
 @media screen and (min-width: 720px) {
     html {
-        font-size: 81.25%;
+        font-size: 87.5%;
     }
 }
+/* Responsive PC */
 @media screen and (min-width: 1080px) {
     html {
-        font-size: 87.5%;
+        font-size: 93.75%;
     }
 }

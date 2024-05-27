@@ -28,7 +28,9 @@
                         <strong class="text_icon">Lab<text class="text_icon text_icon2">Maker</text></strong>
                     </a>
                 </div>
-                <div></div>
+                <div>
+                    <button class="button">Teste</button>
+                </div>
             </nav>
         </header>
         @yield('main')

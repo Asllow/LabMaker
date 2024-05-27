@@ -324,7 +324,7 @@ nav.show div.bi-x {
         margin-left: -1rem;
     }
 }
-@media screen and (max-height: 360px) {
+@media screen and (max-height: 600px) {
     div.triangulo{
         display: none;
     }
@@ -335,7 +335,7 @@ nav.show div.bi-x {
         display: none;
     }
 }
-@media screen and (min-width: 720px) and (max-height: 700px) {
+@media screen and (max-height: 800px) {
     div.triangulo{
         border-bottom: 9.5rem solid transparent;
     }
@@ -343,7 +343,7 @@ nav.show div.bi-x {
         border-bottom: 12rem solid var(--body-color);
     }
     nav.show .menu ul {
-        margin-top: 5rem;
+        margin-top: -8rem;
     }
 }
 /* Responsive PC */

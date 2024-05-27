@@ -336,7 +336,7 @@ nav.show div.bi-x {
         margin-top: -8rem;
     }
 }
-@media screen and (max-height: 550px) {
+@media screen and (max-height: 500px) {
     div.triangulo{
         display: none;
     }

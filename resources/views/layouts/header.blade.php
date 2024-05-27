@@ -20,7 +20,7 @@
 
     </head>
     <body>
-        <header>
+        <header class="header">
             <nav class="container">
                 <div class="maker_logo">
                     <a href="{{route('welcome')}}">

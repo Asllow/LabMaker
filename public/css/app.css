@@ -291,12 +291,104 @@ nav.show div.bi-x {
     color: var(--title-color);
     z-index: 2;
 }
+/****************BAck to Top**********/
+.back-to-top {
+    background: var(--base-color);
+    color: var(--text-color-light);
+    position: fixed;
+    right: 1rem;
+    bottom: 3rem;
+    padding: 0.8rem;
+    clip-path: circle();
+    font-size: 1.5rem;
+    line-height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+}
 
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {
-
+    :root {
+        --title-font-size: 2rem;
+        --subtitle-font-size: 1.125rem;
+    }
 }
 /* Responsive PC */
 @media screen and (min-width: 1080px) {
-
+    .container {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section {
+        padding: 10rem 0;
+    }
+    .section header {
+        max-width: 32rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button {
+        height: 3.125rem;
+    }
+    nav .menu {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+    nav .menu ul {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+    nav .menu ul li a.title {
+        font: 400 1rem var(--body-font);
+        -webkit-font-smoothing: antialiased;
+    }
+    nav .icon-menu {
+        display: none;
+    }
+    #header.scroll {
+        background: var(--body-color);
+    }
+    #header.scroll .logo strong {
+        color: var(--base-color);
+    }
+    #header.scroll .icon-menu {
+        color: var(--base-color);
+    }
+    div.triangulo{
+        display: none;
+    }
+    div.background{
+        display: none;
+    }
+    nav .bi-person-circle{
+        display: none;
+    }
+    .toggle {
+        display: none;
+    }
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: var(--base-color);
+    }
+    nav ul li a::after {
+        content: '';
+        width: 0;
+        height: 2px;
+        background: var(--base-color);
+        position: absolute;
+        left: 0;
+        bottom: -1.7rem; /*-1.5rem*/
+        transition: width 0.2s;
+    }
 }

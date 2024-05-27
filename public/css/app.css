@@ -59,10 +59,11 @@ body {
     border-radius: 0.75rem;
     font: 500 1rem var(--body-font);
     transition: background 0.3s;
-    :hover {
-        background: var(--base-color-alt);
-    }
 }
+.button:hover {
+    background: var(--base-color-alt);
+}
+
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {
     html {

@@ -20,7 +20,7 @@
                 <div class="maker_logo">
                     <a href="{{route('welcome')}}">
                         <img src="{{asset("img/icons/labmaker_lampada.svg")}}" alt="Logo">
-                        <strong class="text_icon_1">Lab<text class="text_icon_2">Maker</text></strong>
+                        <strong class="text_icon">Lab<text class="text_icon text_icon2">Maker</text></strong>
                     </a>
                 </div>
                 <div></div>

@@ -335,6 +335,17 @@ nav.show div.bi-x {
         display: none;
     }
 }
+@media screen and (max-height: 500px) {
+    div.triangulo{
+        border-bottom: 10.5rem solid transparent;
+    }
+    div.background{
+        border-bottom: 13rem solid var(--body-color);
+    }
+    nav.show .menu ul {
+        margin-top: 6rem;
+    }
+}
 /* Responsive PC */
 @media screen and (min-width: 1200px) {
     .container {

@@ -324,6 +324,18 @@ nav.show div.bi-x {
         margin-left: -1rem;
     }
 }
+
+@media screen and (max-height: 700px) {
+    div.triangulo{
+        border-bottom: 9.5rem solid transparent;
+    }
+    div.background{
+        border-bottom: 12rem solid var(--body-color);
+    }
+    nav.show .menu ul {
+        margin-top: -8rem;
+    }
+}
 @media screen and (max-height: 550px) {
     div.triangulo{
         display: none;
@@ -336,17 +348,6 @@ nav.show div.bi-x {
     }
     nav.show .menu ul {
         margin-top: 0;
-    }
-}
-@media screen and (max-height: 800px) {
-    div.triangulo{
-        border-bottom: 9.5rem solid transparent;
-    }
-    div.background{
-        border-bottom: 12rem solid var(--body-color);
-    }
-    nav.show .menu ul {
-        margin-top: -8rem;
     }
 }
 /* Responsive PC */

@@ -170,7 +170,7 @@ nav ul li a {
     position: relative;
 }
 div.triangulo {
-    border-bottom: 14.5rem solid transparent;
+    border-bottom: 11.5rem solid transparent;
     border-left: 50vw solid var(--base-color-alt);
     border-right: 50vw solid var(--base-color-alt);
     height: 0;
@@ -181,7 +181,7 @@ div.triangulo {
     right: 0;
 }
 div.background{
-    border-bottom: 17rem solid var(--body-color);
+    border-bottom: 14rem solid var(--body-color);
     height: 0;
     width: 100vw;
     position: absolute;

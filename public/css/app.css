@@ -324,6 +324,14 @@ nav.show div.bi-x {
         margin-left: -1rem;
     }
 }
+@media screen and (max-height: 360px) {
+    div.triangulo{
+        display: none;
+    }
+    div ul a.logo {
+        display: none;
+    }
+}
 /* Responsive PC */
 @media screen and (min-width: 1080px) {
     .container {

@@ -317,7 +317,7 @@ nav.show div.bi-x {
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {
     :root {
-        --title-font-size: 2rem;
+        --title-font-size: 1.75rem;
         --subtitle-font-size: 1.125rem;
     }
     div ul a.logo {

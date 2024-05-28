@@ -33,13 +33,14 @@
                         <li><a class='title' id='noticias' href=''>Notícias</a></li>
                         @auth()
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
+
+                            <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                             <a href='' class='perfil'>
                                 <h2 class='title'> A </h2>
                                 <h2 class='subtitle'>Arthur Miranda</h2>
                             </a>
                         @endauth
                         @guest()
-                            <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                             <li><a class='title' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
                         @endguest
                         <div class='triangulo'>

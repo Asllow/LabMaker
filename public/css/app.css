@@ -318,8 +318,8 @@ nav.show div.bi-x {
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {
     :root {
-        --title-font-size: 1.75rem;
-        --subtitle-font-size: 1.125rem;
+        --title-font-size: 1.5rem;
+        --subtitle-font-size: 1rem;
     }
     div ul a.logo {
         margin-left: -1rem;
@@ -421,5 +421,21 @@ nav.show div.bi-x {
         left: 0;
         bottom: -1.7rem; /*-1.5rem*/
         transition: width 0.2s;
+    }
+    nav .perfil{
+        display: flex;
+        align-items: center;
+    }
+    nav .perfil .title{
+        background: var(--body-color);
+        clip-path: circle();
+        border: 5px outset var(--base-color);
+        padding: 1rem;
+    }
+    nav .perfil .subtitle{
+        margin-left: 0.5rem;
+        font: 700 var(--subtitle-font-size) var(--title-font);
+        color: var(--title-color);
+        -webkit-font-smoothing: subpixel-antialiased;
     }
 }

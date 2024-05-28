@@ -194,9 +194,7 @@ div.background{
     align-items: center;
 }
 div ul a.logo {
-    position: absolute;
-    bottom: 5rem;
-    margin-left: -2rem;
+    margin-top: 2rem;
 }
 nav .bi-person-circle{
     color: var(--title-color);

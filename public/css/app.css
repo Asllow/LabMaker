@@ -429,12 +429,13 @@ nav.show div.bi-x {
     }
     nav .perfil .title{
         background-color: var(--body-color);
-        border:2px solid red;
-        width: 1rem;
-        height: 1rem;
+        border:2px outset red;
+        width: 2rem;
+        height: 2rem;
         border-radius:100%;
         -moz-border-radius:100%;
         -webkit-border-radius:100%;
+        font-size:1rem;
     }
     nav .perfil .subtitle{
         margin-left: 0.5rem;

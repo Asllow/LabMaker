@@ -431,6 +431,10 @@ nav.show div.bi-x {
         background: var(--body-color);
         clip-path: circle();
         padding: 1rem;
+        border:2px solid var(--base-color);
+        border-radius:50%;
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
     }
     nav .perfil .subtitle{
         margin-left: 0.5rem;

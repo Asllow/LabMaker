@@ -429,6 +429,8 @@ nav.show div.bi-x {
         top: 0;
         left: 0;
     }
+    nav .separator{
+    }
     nav .perfil .title{
         background-color: var(--body-color);
         border:3px solid var(--base-color-alt);

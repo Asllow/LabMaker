@@ -33,7 +33,7 @@
                         <li><a class='title' id='noticias' href=''>Notícias</a></li>
                         @auth()
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
-                            <div class="separator3"></div>
+                            <div class="separator"></div>
                             <div class='perfil'>
                                 <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
                                 <h2 class='subtitle'>{{auth()->user()->name}}</h2>

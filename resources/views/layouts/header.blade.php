@@ -39,8 +39,8 @@
                             </a>
                         @endauth
                         @guest()
-                            <a class='bi bi-person-circle' href=''></a>
-                            <li><a class='title' id='entrar' href=''>Entrar</a></li>
+                            <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
+                            <li><a class='title' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
                         @endguest
                         <div class='triangulo'></div>
                         <div class='background'></div>

@@ -43,11 +43,12 @@
                             <li><a class='title' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
                         @endguest
                         <div class='triangulo'></div>
-                        <div class='background'></div>
-                        <a class='logo' href='{{route('welcome')}}'>
-                            <img src='{{asset("img/icons/labmaker_lampada.svg")}}' alt="Logo">
-                            <text>Lab<strong>Maker</strong></text>
-                        </a>
+                        <div class='background'>
+                            <a class='logo' href='{{route('welcome')}}'>
+                                <img src='{{asset("img/icons/labmaker_lampada.svg")}}' alt="Logo">
+                                <text>Lab<strong>Maker</strong></text>
+                            </a>
+                        </div>
                     </ul>
                 </div>
                 <div class='toggle bi bi-list'></div>

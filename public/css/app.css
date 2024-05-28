@@ -431,7 +431,8 @@ nav.show div.bi-x {
     }
     nav .separator{
         width: 2px;
-        height: 1.5rem;
+        height: 2.5rem;
+        border-radius: 1rem;
         background: linear-gradient(
             180deg,
             hsla(38, 94%, 59%),

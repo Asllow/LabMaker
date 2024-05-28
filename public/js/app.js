@@ -6,3 +6,10 @@ for (const element of toggle) {
         nav.classList.toggle('show')
     })
 }
+// open and close menu (item)
+const links = document.querySelectorAll('nav ul li a')
+for (const link of links) {
+    link.addEventListener('click', function () {
+        nav.classList.remove('show')
+    })
+}

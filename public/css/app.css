@@ -430,7 +430,6 @@ nav.show div.bi-x {
     nav .perfil .title{
         background: var(--body-color);
         clip-path: circle();
-        border: 5px outset var(--base-color);
         padding: 1rem;
     }
     nav .perfil .subtitle{

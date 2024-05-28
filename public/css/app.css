@@ -426,6 +426,8 @@ nav.show div.bi-x {
         display: flex;
         position: relative;
         align-items: center;
+        top: 0;
+        left: 0;
     }
     nav .perfil .title{
         background-color: var(--body-color);

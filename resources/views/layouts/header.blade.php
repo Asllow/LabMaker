@@ -29,8 +29,6 @@
                 <div class='menu'>
                     <ul class='grid'>
                         <li><a class='title' id='index' href='{{route('welcome')}}'>Início</a></li>
-                        <li><a class='title' id='era' href=''>E.R.A</a></li>
-                        <li><a class='title' id='noticias' href=''>Notícias</a></li>
                         @auth()
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <div class="separator"></div>

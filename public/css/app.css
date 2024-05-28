@@ -431,9 +431,10 @@ nav.show div.bi-x {
     }
     nav .separator{
         width: 2px;
+        height: 1.5rem;
         background: linear-gradient(
             180deg,
-            hsla(38, 67%, 81%, 0.34),
+            hsla(38, 94%, 59%),
             hsla(38, 94%, 59%)
         );
     }

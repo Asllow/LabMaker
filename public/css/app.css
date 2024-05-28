@@ -430,6 +430,12 @@ nav.show div.bi-x {
         left: 0;
     }
     nav .separator{
+        width: 2px;
+        background: linear-gradient(
+            180deg,
+            hsla(38, 67%, 81%, 0.34),
+            hsla(38, 94%, 59%)
+        );
     }
     nav .perfil .title{
         background-color: var(--body-color);

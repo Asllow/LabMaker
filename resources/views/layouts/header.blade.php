@@ -35,6 +35,7 @@
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <li>
                                 <a href='' class='perfil'>
+                                    <div class="outline"></div>
                                     <h2 class='title'> A </h2>
                                     <h2 class='subtitle'>Arthur Miranda</h2>
                                 </a>

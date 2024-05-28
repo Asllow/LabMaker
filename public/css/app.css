@@ -430,7 +430,8 @@ nav.show div.bi-x {
     nav .perfil .title{
         background-color: var(--body-color);
         border:2px solid red;
-        padding: 1rem;
+        width: 1rem;
+        height: 1rem;
         border-radius:100%;
         -moz-border-radius:100%;
         -webkit-border-radius:100%;

@@ -28,16 +28,21 @@
                 </a>
                 <div class='menu'>
                     <ul class='grid'>
-                        <a class='bi bi-person-circle' href=''></a>
+                        @auth()
+                            <a href='' class='perfil'>
+                                <h2 class='title'> A </h2>
+                                <h2 class='subtitle'>Arthur Miranda</h2>
+                            </a>
+                        @endauth
+                        @guest()
+                                <a class='bi bi-person-circle' href=''></a>
+                                <li><a class='title' id='entrar' href=''>Entrar</a></li>
+                        @endguest
+
                         <li><a class='title' id='disabled' href='{{route('dashboard')}}'>Dashboard</a></li>
                         <li><a class='title' id='index' href='{{route('welcome')}}'>Início</a></li>
                         <li><a class='title' id='era' href=''>E.R.A</a></li>
                         <li><a class='title' id='noticias' href=''>Notícias</a></li>
-                        <li><a class='title' id='entrar' href=''>Entrar</a></li>
-                        <a href='' class='perfil' id='disabled'>
-                            <h2 class='title'> A </h2>
-                            <h2 class='subtitle'>Arthur Miranda</h2>
-                        </a>
                         <div class='triangulo'></div>
                         <div class='background'></div>
                         <a class='logo' href='{{route('welcome')}}'>

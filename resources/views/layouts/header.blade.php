@@ -34,8 +34,8 @@
                         @auth()
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <div class='perfil'>
-                                <h2 class='title'><div class="outline">A</div></h2>
-                                <h2 class='subtitle'>Arthur Miranda</h2>
+                                <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
+                                <h2 class='subtitle'>{{auth()->user()->name}}</h2>
                             </div>
                         @endauth
                         @guest()

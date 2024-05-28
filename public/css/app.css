@@ -191,7 +191,7 @@ div.background{
     z-index: -1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 div ul a.logo {
     margin-top: 2rem;

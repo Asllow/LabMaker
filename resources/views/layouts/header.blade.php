@@ -28,13 +28,6 @@
                 </a>
                 <div class='menu'>
                     <ul class='grid'>
-                        <div class='triangulo'>
-                            <a class='logo' href='{{route('welcome')}}'>
-                                <img src='{{asset("img/icons/labmaker_lampada.svg")}}' alt="Logo">
-                                <text>Lab<strong>Maker</strong></text>
-                            </a>
-                        </div>
-                        <div class='background'>
                         <li><a class='title' id='index' href='{{route('welcome')}}'>Início</a></li>
                         <li><a class='title' id='era' href=''>E.R.A</a></li>
                         <li><a class='title' id='noticias' href=''>Notícias</a></li>
@@ -49,6 +42,13 @@
                             <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                             <li><a class='title' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
                         @endguest
+                        <div class='triangulo'>
+                            <a class='logo' href='{{route('welcome')}}'>
+                                <img src='{{asset("img/icons/labmaker_lampada.svg")}}' alt="Logo">
+                                <text>Lab<strong>Maker</strong></text>
+                            </a>
+                        </div>
+                        <div class='background'>
                         </div>
                     </ul>
                 </div>

@@ -207,18 +207,17 @@ nav .bi-person-circle{
 nav .perfil{
     display: flex;
     position: absolute;
-    top: 0.6875rem;
-    left: 1.5rem;
-    font-size: 3.125rem;
+    top: 0.475rem;
+    left: 1.52rem;
     align-items: center;
 }
 nav .perfil .title{
     background: var(--body-color);
     clip-path: circle();
-    padding: 1.1rem;
+    padding: 1rem;
 }
 nav .perfil .subtitle{
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font: 700 var(--subtitle-font-size) var(--title-font);
     color: var(--title-color);
     -webkit-font-smoothing: subpixel-antialiased;

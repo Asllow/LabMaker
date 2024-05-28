@@ -424,6 +424,7 @@ nav.show div.bi-x {
     }
     nav .perfil{
         display: flex;
+        position: relative;
         align-items: center;
     }
     nav .perfil .title{

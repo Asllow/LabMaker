@@ -466,7 +466,7 @@ nav.show div.bi-x {
         width: 0;
     }
     nav .menu .perfil-items .separator-1 {
-        padding: 1.5rem 0 1.5rem 0;
+        margin: 1.5rem 0 1.5rem 0;
         width: 100%;
         height: 1px;
         background: linear-gradient(

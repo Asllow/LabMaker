@@ -471,8 +471,10 @@ nav.show div.bi-x {
         width: 100%;
     }
     .perfil-items{
+        margin-top: 4rem;
+        border: 1px solid var(--base-color);
+        border-radius: 1rem;
         background-color: var(--body-color);
-        border: var(--base-color-alt);
         display: flex;
         position: absolute;
         top: 0;

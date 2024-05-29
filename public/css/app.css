@@ -462,21 +462,18 @@ nav.show div.bi-x {
         color: var(--title-color);
         -webkit-font-smoothing: subpixel-antialiased;
     }
+    nav .perfil-items ul li a {
+        color: var(--title-color);
+    }
+    nav .perfil-items ul li a:hover{
+        background: var(--text-color-light);
+        border-radius: 0.5rem;
+    }
     nav .perfil-items ul li a:hover::after{
         width: 0;
     }
-    nav .menu .perfil-items .separator-1 {
-        margin: 0.75rem 0 0.75rem 0;
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(
-            270deg,
-            var(--text-color-light),
-            var(--text-color-light)
-        );
-    }
     nav .menu .perfil-items ul{
-        gap: 0;
+        gap: 1.5rem;
         padding: 1rem 0 1rem 0;
         flex-flow: column;
         width: 100%;

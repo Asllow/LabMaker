@@ -468,6 +468,7 @@ nav.show div.bi-x {
     }
     nav .perfil-items ul li a{
         display: flex;
+        justify-content: center;
         width: 100%;
         height: 100%;
     }

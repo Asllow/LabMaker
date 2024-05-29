@@ -431,6 +431,9 @@ nav.show div.bi-x {
         top: 0;
         left: 0;
     }
+    nav .perfil:hover{
+        cursor: pointer;
+    }
     nav .separator{
         width: 2px;
         height: 3.5rem;

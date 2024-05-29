@@ -314,7 +314,7 @@ nav.show div.bi-x {
     opacity: 1;
     transform: translateY(0%);
 }
-.hidden {
+.perfil-items{
     display: none;
 }
 /* Responsive  Tablet */
@@ -461,5 +461,14 @@ nav.show div.bi-x {
         font: 700 var(--subtitle-font-size) var(--title-font);
         color: var(--title-color);
         -webkit-font-smoothing: subpixel-antialiased;
+    }
+    .perfil-items{
+        background-color: var(--body-color);
+        border: var(--base-color-alt);
+        display: flex;
+        flex-flow: column;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }

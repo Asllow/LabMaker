@@ -37,7 +37,7 @@
                             <div data-dropdown class='perfil' x-data="{ open: false }" @click="open = true" >
                                 <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
                                 <h2 class='subtitle'>{{auth()->user()->name}}</h2>
-                                <div data-dropdown-items class="absolute top-0" x-show="open" @click.away="open = false">
+                                <div data-dropdown-items class="perfil-items" x-show="open" @click.away="open = false">
                                     <ul>
                                         <li class=""><a href="#">Meu Perfil</a></li>
                                         <li class=""><a href="#">Configurações</a></li>

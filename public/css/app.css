@@ -466,7 +466,7 @@ nav.show div.bi-x {
         width: 0;
     }
     nav .menu .perfil-items ul{
-        gap: 0;
+        gap: 1.5rem;
         padding: 1rem 0.5rem 1rem 0.5rem;
         flex-flow: column;
         width: 100%;

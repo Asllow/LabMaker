@@ -44,12 +44,6 @@
                             <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                         @endguest
                         <button data-dropdown class="flex items-center px-3 py-2 focus:outline-none hover:bg-gray-200 hover:rounded-md" type="button" x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
-
-                            <span class="ml-4 text-sm hidden md:inline-block">{{auth()->user()->name}}</span>
-                            <svg class="fill-current w-3 ml-4" viewBox="0 0 407.437 407.437">
-                                <path d="M386.258 91.567l-182.54 181.945L21.179 91.567 0 112.815 203.718 315.87l203.719-203.055z" />
-                            </svg>
-
                             <div data-dropdown-items class="text-sm text-left absolute top-0 right-0 mt-16 mr-4 bg-white rounded border border-gray-400 shadow" x-show="open" @click.away="open = false">
                                 <ul>
                                     <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Meu Perfil</a></li>

@@ -467,14 +467,14 @@ nav.show div.bi-x {
     }
     nav .menu .perfil-items ul{
         gap: 1.5rem;
-        padding: 1rem 0.5rem 1rem 0.5rem;
+        padding: 1rem 1rem 1rem 1rem;
         flex-flow: column;
         width: 100%;
     }
     .perfil-items{
-        margin-top: 3.75rem;
-        border: 1px solid var(--base-color-alt);
-        border-radius: 0.75rem;
+        margin-top: 3.5rem;
+        border: 1px solid var(--title-color);
+        border-radius: 0.5rem;
         background-color: var(--body-color);
         display: flex;
         position: absolute;

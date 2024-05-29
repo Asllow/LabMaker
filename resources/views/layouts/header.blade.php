@@ -39,9 +39,9 @@
                                 <h2 class='subtitle'>{{auth()->user()->name}}</h2>
                                 <div data-dropdown-items class="" x-show="open" @click.away="open = false">
                                     <ul>
-                                        <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Meu Perfil</a></li>
-                                        <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Configurações</a></li>
-                                        <li class="px-4 py-3 hover:bg-gray-200"><a href="{{route('sair')}}">Sair</a></li>
+                                        <li class="border-b hover:bg-gray-200"><a href="#">Meu Perfil</a></li>
+                                        <li class="border-b hover:bg-gray-200"><a href="#">Configurações</a></li>
+                                        <li class="hover:bg-gray-200"><a href="{{route('sair')}}">Sair</a></li>
                                     </ul>
                                 </div>
                             </div>

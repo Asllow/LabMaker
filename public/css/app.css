@@ -433,6 +433,7 @@ nav.show div.bi-x {
     }
     nav .perfil:hover{
         cursor: pointer;
+        background: var(--text-color-light);
     }
     nav .separator{
         width: 2px;

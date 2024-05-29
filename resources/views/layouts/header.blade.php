@@ -34,7 +34,7 @@
                         @auth()
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <div class="separator"></div>
-                            <div class="flex items-center px-3 py-2 focus:outline-none hover:bg-gray-200 hover:rounded-md" data-dropdown class='perfil' type="button" x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
+                            <div class="items-center focus:outline-none" data-dropdown class='perfil' type="button" x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
                                 <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
                                 <h2 class='subtitle'>{{auth()->user()->name}}</h2>
                                 <div data-dropdown-items class="text-sm text-left absolute top-0 right-0 mt-16 mr-4 bg-white rounded border border-gray-400 shadow" x-show="open" @click.away="open = false">

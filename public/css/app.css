@@ -462,11 +462,16 @@ nav.show div.bi-x {
         color: var(--title-color);
         -webkit-font-smoothing: subpixel-antialiased;
     }
+    nav .perfil-items ul li a:hover::after{
+        width: 0;
+    }
+    nav .menu .perfil-items ul{
+        flex-flow: column;
+    }
     .perfil-items{
         background-color: var(--body-color);
         border: var(--base-color-alt);
         display: flex;
-        flex-flow: column;
         position: absolute;
         top: 0;
         right: 0;

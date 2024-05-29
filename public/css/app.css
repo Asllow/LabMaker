@@ -23,7 +23,7 @@ img {
     --base-color-alt: hsl(50, 100%, 50%);
     --title-color: #0e0f34;
     --text-color: hsl(0, 0%, 46%);
-    --text-color-light: hsl(0, 2%, 74%);
+    --text-color-light: hsl(0, 0%, 82%);
     --body-color: hsl(0, 0%, 100%);
     --title-font-size: 1.5rem;
     --subtitle-font-size: 1rem;
@@ -433,8 +433,6 @@ nav.show div.bi-x {
     }
     nav .perfil:hover{
         cursor: pointer;
-        background: var(--text-color-light);
-        border-radius: 0.2rem;
     }
     nav .separator{
         width: 2px;

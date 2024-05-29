@@ -194,8 +194,8 @@ div.background{
     z-index: -1;
 }
 div ul a.logo {
-    margin-top: 4rem;
-    margin-right: 1rem;
+    margin-top: 5rem;
+    margin-right: 4rem;
 }
 nav .bi-person-circle{
     color: var(--title-color);

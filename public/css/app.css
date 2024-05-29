@@ -467,7 +467,7 @@ nav.show div.bi-x {
     }
     nav .menu .perfil-items ul{
         gap: 1.5rem;
-        padding: 1rem 1rem 1rem 1rem;
+        padding: 1rem 0 1rem 0;
         flex-flow: column;
         width: 100%;
     }
@@ -479,7 +479,7 @@ nav.show div.bi-x {
         display: flex;
         position: absolute;
         top: 0;
-        right: 0;
-        left: 0;
+        right: -1rem;
+        left: -1rem;
     }
 }

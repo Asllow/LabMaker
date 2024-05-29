@@ -465,9 +465,8 @@ nav.show div.bi-x {
     nav .perfil-items ul li a:hover::after{
         width: 0;
     }
-    nav .menu .perfil-items ul li {
-    }
     nav .menu .perfil-items .separator-1 {
+        padding: 1.5rem 0 1.5rem 0;
         width: 100%;
         height: 1px;
         background: linear-gradient(
@@ -477,7 +476,7 @@ nav.show div.bi-x {
         );
     }
     nav .menu .perfil-items ul{
-        gap: 1.5rem;
+        gap: 0;
         padding: 1rem 0 1rem 0;
         flex-flow: column;
         width: 100%;

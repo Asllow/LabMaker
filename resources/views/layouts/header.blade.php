@@ -37,6 +37,13 @@
                             <div class='perfil'>
                                 <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
                                 <h2 class='subtitle'>{{auth()->user()->name}}</h2>
+                                <div data-dropdown-items class="text-sm text-left absolute top-0 right-0 mt-16 mr-4 bg-white rounded border border-gray-400 shadow" x-show="open" @click.away="open = false">
+                                    <ul>
+                                        <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Meu Perfil</a></li>
+                                        <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Configurações</a></li>
+                                        <li class="px-4 py-3 hover:bg-gray-200"><a href="{{route('sair')}}">Sair</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         @endauth
                         @guest()
@@ -44,13 +51,7 @@
                             <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                         @endguest
                         <button data-dropdown class="flex items-center px-3 py-2 focus:outline-none hover:bg-gray-200 hover:rounded-md" type="button" x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
-                            <div data-dropdown-items class="text-sm text-left absolute top-0 right-0 mt-16 mr-4 bg-white rounded border border-gray-400 shadow" x-show="open" @click.away="open = false">
-                                <ul>
-                                    <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Meu Perfil</a></li>
-                                    <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Configurações</a></li>
-                                    <li class="px-4 py-3 hover:bg-gray-200"><a href="{{route('sair')}}">Sair</a></li>
-                                </ul>
-                            </div>
+
                         </button>
                         <div class='triangulo'>
                             <a class='logo' href='{{route('welcome')}}'>

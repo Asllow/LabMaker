@@ -466,8 +466,9 @@ nav.show div.bi-x {
         width: 0;
     }
     nav .menu .perfil-items ul{
-        gap: 1rem;
+        gap: 1.5rem;
         flex-flow: column;
+        width: 100%;
     }
     .perfil-items{
         background-color: var(--body-color);

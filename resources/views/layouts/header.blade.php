@@ -40,7 +40,9 @@
                                 <div data-dropdown-items class="perfil-items" x-show="open" @click.away="open = false">
                                     <ul>
                                         <li class=""><a href="#">Meu Perfil</a></li>
+                                        <div class="separator-1"></div>
                                         <li class=""><a href="#">Configurações</a></li>
+                                        <div class="separator-1"></div>
                                         <li class=""><a href="{{route('sair')}}">Sair</a></li>
                                     </ul>
                                 </div>

@@ -314,7 +314,9 @@ nav.show div.bi-x {
     opacity: 1;
     transform: translateY(0%);
 }
-
+.hidden {
+    display: none;
+}
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {
     :root {

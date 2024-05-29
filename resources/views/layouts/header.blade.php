@@ -9,6 +9,8 @@
         <title>@yield('title')</title>
         <link href="{{asset("css/app.css")}}" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.2/dist/alpine.min.js"></script>
         {{-- Favicon --}}
         <link rel="apple-touch-icon" sizes="180x180" href="{{asset("favicon/apple-touch-icon.png")}}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{asset("favicon/favicon-32x32.png")}}">
@@ -41,6 +43,22 @@
                             <li><a class='title' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
                             <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                         @endguest
+                        <button data-dropdown class="flex items-center px-3 py-2 focus:outline-none hover:bg-gray-200 hover:rounded-md" type="button" x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=100&h=100&q=80" alt="Profle" class="h-8 w-8 rounded-full">
+
+                            <span class="ml-4 text-sm hidden md:inline-block">{{auth()->user()->name}}</span>
+                            <svg class="fill-current w-3 ml-4" viewBox="0 0 407.437 407.437">
+                                <path d="M386.258 91.567l-182.54 181.945L21.179 91.567 0 112.815 203.718 315.87l203.719-203.055z" />
+                            </svg>
+
+                            <div data-dropdown-items class="text-sm text-left absolute top-0 right-0 mt-16 mr-4 bg-white rounded border border-gray-400 shadow" x-show="open" @click.away="open = false">
+                                <ul>
+                                    <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Meu Perfil</a></li>
+                                    <li class="px-4 py-3 border-b hover:bg-gray-200"><a href="#">Configurações</a></li>
+                                    <li class="px-4 py-3 hover:bg-gray-200"><a href="{{route('sair')}}">Sair</a></li>
+                                </ul>
+                            </div>
+                        </button>
                         <div class='triangulo'>
                             <a class='logo' href='{{route('welcome')}}'>
                                 <img src='{{asset("img/icons/labmaker_lampada.svg")}}' alt="Logo">

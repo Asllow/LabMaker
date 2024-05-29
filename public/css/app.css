@@ -466,9 +466,10 @@ nav.show div.bi-x {
         width: 100%;
         height: 100%;
     }
-    nav .perfil-items ul li:hover{
-        background: var(--text-color-light);
-        border-radius: 0.5rem;
+    nav .perfil-items ul li a{
+        display: flex;
+        width: 100%;
+        height: 100%;
     }
     nav .perfil-items ul li a:hover::after{
         width: 0;

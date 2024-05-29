@@ -492,7 +492,7 @@ nav.show div.bi-x {
         width: 100%;
     }
     .perfil-items{
-        margin-top: 3.5rem;
+        margin-top: 3.75rem;
         border: 1px solid var(--text-color);
         border-radius: 0.5rem;
         background-color: var(--body-color);

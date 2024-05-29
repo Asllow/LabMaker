@@ -462,8 +462,7 @@ nav.show div.bi-x {
         color: var(--title-color);
         -webkit-font-smoothing: subpixel-antialiased;
     }
-    nav .perfil-items ul li a {
-        display: flex;
+    nav .perfil-items ul li {
         width: 100%;
         height: 100%;
     }

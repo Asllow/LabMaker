@@ -434,6 +434,7 @@ nav.show div.bi-x {
     nav .perfil:hover{
         cursor: pointer;
         background: var(--text-color-light);
+        border-radius: 0.2rem;
     }
     nav .separator{
         width: 2px;

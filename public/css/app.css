@@ -430,16 +430,16 @@ nav.show div.bi-x {
         align-items: center;
         top: 0;
         left: 0;
-        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+        padding: 0.3rem;
     }
     .perfil-select{
         background: var(--text-color-light);
-        border-radius: 0.2rem;
+        border-radius: 0.5rem;
     }
     nav .perfil:hover{
         cursor: pointer;
         background: var(--text-color-light);
-        border-radius: 0.2rem;
+        border-radius: 0.5rem;
     }
     nav .separator{
         width: 2px;

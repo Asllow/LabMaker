@@ -8,7 +8,6 @@
     <main>
         <section class="section">
             <h1>Teste</h1>
-            <p>blalb</p>
         </section>
     </main>
     <footer></footer>

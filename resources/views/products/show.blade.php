@@ -27,6 +27,12 @@
                 </div>
             </div>
             <div class="sm:col-span-4">
+                <label class="block text-sm font-medium leading-6 text-gray-900">Código Pix</label>
+                <div class="mt-2">
+                    {{ $product->pix_produto }}
+                </div>
+            </div>
+            <div class="sm:col-span-4">
                 <label class="block text-sm font-medium leading-6 text-gray-900">Dimensões</label>
                 <div class="mt-2">
                     {{ $product->dimensao_produto }}

@@ -41,6 +41,9 @@
                             {{ $rs->preco_produto }}
                         </td>
                         <td>
+                            {{ $rs->pix_produto }}
+                        </td>
+                        <td>
                             {{ $rs->dimensao_produto }}
                         </td>
                         <td>

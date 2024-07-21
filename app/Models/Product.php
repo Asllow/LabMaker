@@ -15,6 +15,7 @@ class Product extends Model
         'desc_produto',
         'dimensao_produto',
         'img_produto',
+        'pix_produto',
         'preco_produto'
     ];
 

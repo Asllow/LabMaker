@@ -73,7 +73,7 @@ class ProductController extends Controller
             $id_image = str_replace("https://drive.google.com/file/d/", "", $response['img_produto']);
             $pos = strpos($id_image, '/');
             $id_image = substr($id_image, 0, $pos-1);
-            $response['img_produto'] = "https://drive.google.com/uc?export=download&id=" . $id_image . "
+            $response['img_produto'] = "https://drive.google.com/uc?id=" . $id_image . "
 ";
         }
         $product->update($response);

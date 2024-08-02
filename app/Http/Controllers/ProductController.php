@@ -72,7 +72,7 @@ class ProductController extends Controller
         if (str_contains($response['img_produto'], "https://drive.google.com/file/d/")){
             $id_image = str_replace("https://drive.google.com/file/d/", "", $response['img_produto']);
             $pos = strpos($id_image, '/');
-            $id_image = substr($id_image, 0, $pos-1);
+            $id_image = substr($id_image, 0, $pos);
             $response['img_produto'] = "https://drive.usercontent.google.com/download?id=" . $id_image;
         }
         $product->update($response);

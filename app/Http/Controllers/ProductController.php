@@ -34,6 +34,12 @@ class ProductController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $response = $this->checkNull($request);
+        if (str_contains($response['img_produto'], "https://drive.google.com/file/d/")){
+            $id_image = str_replace("https://drive.google.com/file/d/", "", $response['img_produto']);
+            $pos = strpos($id_image, '/');
+            $id_image = substr($id_image, 0, $pos-1);
+            $response['img_produto'] = "https://lh3.googleusercontent.com/d/" . $id_image;
+        }
         Product::create($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
@@ -63,6 +69,12 @@ class ProductController extends Controller
     {
         $response = $this->checkNull($request);
         $product = Product::findOrFail($id);
+        if (str_contains($response['img_produto'], "https://drive.google.com/file/d/")){
+            $id_image = str_replace("https://drive.google.com/file/d/", "", $response['img_produto']);
+            $pos = strpos($id_image, '/');
+            $id_image = substr($id_image, 0, $pos-1);
+            $response['img_produto'] = "https://lh3.googleusercontent.com/d/" . $id_image;
+        }
         $product->update($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto atualizado com sucesso!');
     }

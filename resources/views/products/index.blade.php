@@ -32,7 +32,7 @@
                             {{ $loop->iteration }}
                         </th>
                         <td>
-                            <img src="{{ $rs->img_produto }}">
+                            <img src="{{ $rs->img_produto }}" width="70">
                         </td>
                         <td>
                             {{ $rs->nome_produto }}

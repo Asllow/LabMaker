@@ -33,11 +33,7 @@ class ProductController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'img_produto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-        ]);
         $response = $this->checkNull($request);
-
         Product::create($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }

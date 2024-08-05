@@ -33,13 +33,11 @@ class ProductController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $request->validate([
+            'img_produto' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
         $response = $this->checkNull($request);
-        if (str_contains($response['img_produto'], "https://drive.google.com/file/d/")){
-            $id_image = str_replace("https://drive.google.com/file/d/", "", $response['img_produto']);
-            $pos = strpos($id_image, '/');
-            $id_image = substr($id_image, 0, $pos-1);
-            $response['img_produto'] = "https://lh3.googleusercontent.com/d/" . $id_image;
-        }
+
         Product::create($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto cadastrado com sucesso!');
     }
@@ -69,12 +67,12 @@ class ProductController extends Controller
     {
         $response = $this->checkNull($request);
         $product = Product::findOrFail($id);
-        if (str_contains($response['img_produto'], "https://drive.google.com/file/d/")){
+        /*if (str_contains($response['img_produto'], "https://drive.google.com/file/d/")){
             $id_image = str_replace("https://drive.google.com/file/d/", "", $response['img_produto']);
             $pos = strpos($id_image, '/');
             $id_image = substr($id_image, 0, $pos);
             $response['img_produto'] = "https://drive.google.com/uc?export=view&id=" . $id_image;
-        }
+        }*/
         $product->update($response);
         return redirect()->route('makesoft.produtos')->with('success', 'Produto atualizado com sucesso!');
     }
@@ -95,7 +93,6 @@ class ProductController extends Controller
         if ($request->nome_produto == null){$response['nome_produto'] = "";}else{$response['nome_produto'] = $request->nome_produto;}
         if ($request->img_produto == null){$response['img_produto'] = "";}else{$response['img_produto'] = $request->img_produto;}
         if ($request->preco_produto == null){$response['preco_produto'] = 0;}else{$response['preco_produto'] = $request->preco_produto;}
-        if ($request->pix_produto == null){$response['pix_produto'] = "";}else{$response['pix_produto'] = $request->pix_produto;}
         if ($request->desc_produto == null){$response['desc_produto'] = "";}else{$response['desc_produto'] = $request->desc_produto;}
         if ($request->dimensao_produto == null){$response['dimensao_produto'] = "";}else{$response['dimensao_produto'] = $request->dimensao_produto;}
         return $response;

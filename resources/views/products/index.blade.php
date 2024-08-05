@@ -19,7 +19,6 @@
                 <th scope="col" class="px-6 py-3">Imagem</th>
                 <th scope="col" class="px-6 py-3">Nome</th>
                 <th scope="col" class="px-6 py-3">Preço</th>
-                <th scope="col" class="px-6 py-3">Código Pix</th>
                 <th scope="col" class="px-6 py-3">Dimensão</th>
                 <th scope="col" class="px-6 py-3">Descrição</th>
                 <th scope="col" class="px-6 py-3">Ações</th>
@@ -40,9 +39,6 @@
                         </td>
                         <td>
                             {{ $rs->preco_produto }}
-                        </td>
-                        <td>
-                            {{ $rs->pix_produto }}
                         </td>
                         <td>
                             {{ $rs->dimensao_produto }}

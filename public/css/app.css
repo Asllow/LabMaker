@@ -328,6 +328,7 @@ nav .perfil:hover{
 .perfil-items{
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {

@@ -206,6 +206,7 @@ nav .bi-person-circle{
 }
 nav .perfil{
     display: flex;
+    flex-direction: column;
     position: absolute;
     top: 0.475rem;
     left: 1.52rem;

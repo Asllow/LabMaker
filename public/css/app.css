@@ -464,11 +464,11 @@ nav .perfil .mobile{
             hsla(38, 94%, 59%)
         );
     }
+    nav .perfil{
+        display: none;
+    }
     nav .perfil .pc{
         display: flex;
-    }
-    nav .perfil .mobile{
-        display: none;
     }
     nav .perfil .title{
         background-color: var(--body-color);

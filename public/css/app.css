@@ -215,6 +215,7 @@ nav .perfil{
 nav .perfil .titles {
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 nav .perfil .title{
     background: var(--body-color);
@@ -318,6 +319,12 @@ nav.show div.bi-x {
     visibility: visible;
     opacity: 1;
     transform: translateY(0%);
+}
+nav .perfil .pc{
+    display: none;
+}
+nav .perfil .mobile{
+    display: flex;
 }
 .perfil-items{
     display: flex;
@@ -456,6 +463,12 @@ nav.show div.bi-x {
             hsla(38, 94%, 59%),
             hsla(38, 94%, 59%)
         );
+    }
+    nav .perfil .pc{
+        display: flex;
+    }
+    nav .perfil .mobile{
+        display: none;
     }
     nav .perfil .title{
         background-color: var(--body-color);

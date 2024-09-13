@@ -35,8 +35,10 @@
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <div class="separator"></div>
                             <div data-dropdown class='perfil' x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
-                                <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
-                                <h2 class='subtitle'>{{auth()->user()->name}}</h2>
+                                <div class="titles">
+                                    <h2 class='title'><div class="outline">{{substr(auth()->user()->name, 0, 1)}}</div></h2>
+                                    <h2 class='subtitle'>{{auth()->user()->name}}</h2>
+                                </div>
                                 <div data-dropdown-items class="perfil-items" x-show="open" @click.away="open = false">
                                     <ul>
                                         <li class=""><a href="#">Meu Perfil</a></li>

@@ -212,6 +212,9 @@ nav .perfil{
     left: 1.52rem;
     align-items: center;
 }
+nav .perfil .titles {
+    flex-direction: row;
+}
 nav .perfil .title{
     background: var(--body-color);
     clip-path: circle();

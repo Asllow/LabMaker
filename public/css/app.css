@@ -315,7 +315,8 @@ nav.show div.bi-x {
     transform: translateY(0%);
 }
 .perfil-items{
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 /* Responsive  Tablet */
 @media screen and (min-width: 720px) {

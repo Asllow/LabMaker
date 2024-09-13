@@ -213,6 +213,7 @@ nav .perfil{
     align-items: center;
 }
 nav .perfil .titles {
+    display: flex;
     flex-direction: row;
 }
 nav .perfil .title{

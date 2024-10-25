@@ -37,9 +37,13 @@ class PontoController extends Controller
         if (count($results_year[count($results_year)-1]) == 1){
             array_pop($results_year);
         }
+        $totalDuration = 0;
         foreach ($results_year as $result){
-            echo $result[0];
+            $startTime = Carbon::parse($result[0]);
+            $finishTime = Carbon::parse($result[1]);
+            $totalDuration += $finishTime->diffInSeconds($startTime);
         }
+        gmdate('H:i:s', $totalDuration);
 
     }
 

@@ -43,7 +43,6 @@ class PontoController extends Controller
             $finishTime = Carbon::parse($result[1]);
             $totalDuration += $finishTime->diffInSeconds($startTime);
         }
-        gmdate('H:i:s', $totalDuration);
         return $totalDuration;
     }
 

@@ -15,7 +15,8 @@ class PontoController extends Controller
 
     public function gethours(string $registration, string $date): string
     {
-        return $registration  . " - " . $date;
+        $results = PunchClock::where('registration', $registration)->get() ?? 0;
+        return $results;
     }
 
     public function ponto(string $id, string $any, string $timestamp)

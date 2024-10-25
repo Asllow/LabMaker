@@ -140,6 +140,6 @@ class PontoController extends Controller
         foreach ($totalDuration as $duration){
             $interval->add(CarbonInterval::createFromFormat('H:i:s', $duration))->cascade();
         }
-        return $interval->format('%H:%I:%S');
+        return $interval;
     }
 }

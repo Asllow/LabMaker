@@ -41,7 +41,7 @@ class PontoController extends Controller
         foreach ($results_year as $result){
             $startTime = Carbon::parse($result[0]);
             $finishTime = Carbon::parse($result[1]);
-            $totalDuration += $finishTime->diffInSeconds($startTime);
+            $totalDuration .= $startTime->diff($finishTime)->format('%H:%I:%S');
         }
         return $totalDuration;
     }

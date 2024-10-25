@@ -1,6 +1,6 @@
 <h1>Contador de horas trabalhadas - LabMaker</h1>
 <h2>{{ $user->registration }} - {{ $user->name }} {{ $user->last_name }}</h2>
-<div style="display: inline-flex; gap: 2rem; margin-top: 2rem">
+<div style="display: inline-flex; gap: 2rem; margin-top: 1rem; margin-left: 1rem">
     <div>
         <fieldset>
             <h4>Horas Totais</h4>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\IdMaker;
 use App\Models\PunchClock;
 use App\Models\User;
+use Carbon\Carbon;
 use Datetime;
 
 class PontoController extends Controller
@@ -33,7 +34,12 @@ class PontoController extends Controller
                     break;
             }
         }
-        return count($results_year[count($results_year)-2]);
+        if (count($results_year[count($results_year)-1]) == 1){
+            array_pop($results_year);
+        }
+        foreach ($results_year as $result){
+            echo $result[0];
+        }
 
     }
 

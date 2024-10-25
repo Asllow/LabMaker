@@ -15,7 +15,7 @@ class PontoController extends Controller
 
     public function gethours(string $registration, string $date): string
     {
-        return "lalala";
+        return $registration  . " - " . $date;
     }
 
     public function ponto(string $id, string $any, string $timestamp)

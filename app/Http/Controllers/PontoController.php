@@ -33,7 +33,7 @@ class PontoController extends Controller
                     break;
             }
         }
-        return count($results_year[count($results_year)-1]);
+        return count($results_year[count($results_year)-2]);
 
     }
 

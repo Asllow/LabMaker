@@ -13,6 +13,11 @@ class PontoController extends Controller
         return view('ponto.index');
     }
 
+    public function gethours(string $registration, string $date): string
+    {
+        return "lalala";
+    }
+
     public function ponto(string $id, string $any, string $timestamp)
     {
         $this->checkAny($id);

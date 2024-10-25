@@ -18,9 +18,22 @@ class PontoController extends Controller
         $results_all = PunchClock::where('registration', $registration)->get() ?? 0;
         $results_query = PunchClock::where('registration', $registration)->whereYear('created_at', $date)->get() ?? 0;
         $results_year = [];
+        $n = 0;
+        $switch = 0;
         foreach ($results_query as $result){
-            echo $result->created_at;
+            switch ($switch) {
+                case 0:
+                    $results_year[$n][0] = $result->created_at;
+                    $switch = 1;
+                    break;
+                case 1:
+                    $results_year[$n][1] = $result->created_at;
+                    $switch = 1;
+                    $n+=1;
+                    break;
+            }
         }
+        return $results_year;
 
     }
 

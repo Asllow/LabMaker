@@ -152,6 +152,6 @@ class PontoController extends Controller
         $hoursday = $days * 23;
         $totalhours = $hours + $hoursyear + $hoursmonth + $hoursday;
         $bleh = [$year, $month, $days, $hours, $minutes, $seconds, $interval];
-        return $totalhours;
+        return $totalhours . ":" . $minutes . ":" . $seconds;
     }
 }

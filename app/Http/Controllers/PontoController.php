@@ -19,38 +19,7 @@ class PontoController extends Controller
     {
         $results_all = PunchClock::where('registration', $registration)->get() ?? 0;
         $results_query = PunchClock::where('registration', $registration)->whereYear('created_at', $date)->get() ?? 0;
-        $results_year = [];
-        $n = 0;
-        $switch = 0;
-        foreach ($results_query as $result){
-            switch ($switch) {
-                case 0:
-                    $results_year[$n][0] = $result->created_at;
-                    $switch = 1;
-                    break;
-                case 1:
-                    $results_year[$n][1] = $result->created_at;
-                    $switch = 0;
-                    $n+=1;
-                    break;
-            }
-        }
-        if (count($results_year[count($results_year)-1]) == 1){
-            array_pop($results_year);
-        }
-        $totalDuration = [];
-        foreach ($results_year as $result){
-            $startTime = Carbon::parse($result[0]);
-            $finishTime = Carbon::parse($result[1]);
-            $stepDuration = $startTime->diff($finishTime)->format('%H:%I:%S');
-            $totalDuration[] = $stepDuration;
-        }
-
-        $interval = CarbonInterval::seconds(0);
-        foreach ($totalDuration as $duration){
-            $interval->add(CarbonInterval::createFromFormat('H:i:s', $duration))->cascade();
-        }
-        return $interval->format('%H:%I:%S');
+        return $this->get_hours($results_query);
     }
 
     public function ponto(string $id, string $any, string $timestamp)
@@ -139,12 +108,38 @@ class PontoController extends Controller
         return $currentDateTime->format('dmyHis');
     }
 
-    private function check($number){
-        if($number % 2 == 0){
-            return 0;
+    private function get_hours($initarray){
+        $results_year = [];
+        $n = 0;
+        $switch = 0;
+        foreach ($initarray as $result){
+            switch ($switch) {
+                case 0:
+                    $results_year[$n][0] = $result->created_at;
+                    $switch = 1;
+                    break;
+                case 1:
+                    $results_year[$n][1] = $result->created_at;
+                    $switch = 0;
+                    $n+=1;
+                    break;
+            }
         }
-        else{
-            return 1;
+        if (count($results_year[count($results_year)-1]) == 1){
+            array_pop($results_year);
         }
+        $totalDuration = [];
+        foreach ($results_year as $result){
+            $startTime = Carbon::parse($result[0]);
+            $finishTime = Carbon::parse($result[1]);
+            $stepDuration = $startTime->diff($finishTime)->format('%H:%I:%S');
+            $totalDuration[] = $stepDuration;
+        }
+
+        $interval = CarbonInterval::seconds(0);
+        foreach ($totalDuration as $duration){
+            $interval->add(CarbonInterval::createFromFormat('H:i:s', $duration))->cascade();
+        }
+        return $interval->format('%H:%I:%S');
     }
 }

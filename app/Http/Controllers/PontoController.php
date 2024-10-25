@@ -17,7 +17,7 @@ class PontoController extends Controller
     {
         $results_all = PunchClock::where('registration', $registration)->get() ?? 0;
         $results_query = PunchClock::where('registration', $registration)->whereYear('created_at', $date)->get() ?? 0;
-        return count($results_query);
+        return $this->check(count($results_query));
     }
 
     public function ponto(string $id, string $any, string $timestamp)
@@ -104,5 +104,14 @@ class PontoController extends Controller
     {
         $currentDateTime = new DateTime('now');
         return $currentDateTime->format('dmyHis');
+    }
+
+    private function check($number){
+        if($number % 2 == 0){
+            return 0;
+        }
+        else{
+            return 1;
+        }
     }
 }

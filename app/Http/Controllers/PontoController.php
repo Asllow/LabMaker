@@ -44,7 +44,7 @@ class PontoController extends Controller
             $totalDuration += $finishTime->diffInSeconds($startTime);
         }
         gmdate('H:i:s', $totalDuration);
-
+        return $totalDuration;
     }
 
     public function ponto(string $id, string $any, string $timestamp)

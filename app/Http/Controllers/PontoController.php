@@ -22,7 +22,7 @@ class PontoController extends Controller
         $results_query = PunchClock::where('registration', $registration)->whereYear('created_at', $date)->get() ?? 0;
         $hours_all = $this->get_hours($results_all);
         $hours_query = $this->get_hours($results_query);
-        return view('hours.index', compact('hours_all', 'hours_query', 'user'));
+        return view('hours.index', compact('hours_all', 'hours_query', 'user', 'date'));
     }
 
     public function ponto(string $id, string $any, string $timestamp)

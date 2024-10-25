@@ -5,6 +5,7 @@ use App\Models\IdMaker;
 use App\Models\PunchClock;
 use App\Models\User;
 use Carbon\Carbon;
+use Carbon\CarbonInterval;
 use Datetime;
 
 class PontoController extends Controller
@@ -44,7 +45,12 @@ class PontoController extends Controller
             $stepDuration = $startTime->diff($finishTime)->format('%H:%I:%S');
             $totalDuration[] = $stepDuration;
         }
-        return $totalDuration;
+
+        $interval = CarbonInterval::seconds(0);
+        foreach ($totalDuration as $duration){
+            $interval->add(CarbonInterval::createFromFormat('H:i:s', $duration))->cascade();
+        }
+        return $interval->format('%H:%I:%S');
     }
 
     public function ponto(string $id, string $any, string $timestamp)

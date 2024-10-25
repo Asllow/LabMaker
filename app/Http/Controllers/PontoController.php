@@ -28,7 +28,7 @@ class PontoController extends Controller
                     break;
                 case 1:
                     $results_year[$n][1] = $result->created_at;
-                    $switch = 1;
+                    $switch = 0;
                     $n+=1;
                     break;
             }

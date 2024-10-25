@@ -141,7 +141,7 @@ class PontoController extends Controller
             $interval->add(CarbonInterval::createFromFormat('H:i:s', $duration))->cascade();
         }
         $year = $interval->format('%Y');
-        $month = $interval->format('%Y');
+        $month = $interval->format('%M');
         $days = $interval->format('%D');
         $hours = $interval->format('%H');
         $minutes = $interval->format('%I');

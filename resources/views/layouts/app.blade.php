@@ -13,7 +13,7 @@
                     </a>
                     </a>
                 </div>
-                <div class="flex flex-col items-center w-full mt-2 border-t border-gray-300">
+                <div class="flex flex-col items-center w-full mt-2 border-t border-gray-300 low-items">
                     @if(auth()->user()->permission_makesoft >= '1')
                         <a class="flex items-center w-full h-12 px-3 mt-2 rounded hover:bg-gray-300" href="{{route('makesoft.produtos')}}">
                             <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

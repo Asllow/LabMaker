@@ -7,6 +7,10 @@ use App\Models\User;
 use Carbon\Carbon;
 use Carbon\CarbonInterval;
 use Datetime;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Foundation\Application;
+use function Laravel\Prompts\error;
 
 class PontoController extends Controller
 {
@@ -15,8 +19,11 @@ class PontoController extends Controller
         return view('ponto.index');
     }
 
-    public function gethours(string $registration, string $date)
+    public function gethours(string $registration, string $date): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
+        if ($registration == 0){
+            return error(404);
+        }
         $user = User::firstWhere('registration', $registration) ?? 0;
         $results_all = PunchClock::where('registration', $registration)->get() ?? 0;
         $hours_all = $this->get_hours($results_all);

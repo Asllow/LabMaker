@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('navbar')
-    <body class="flex items-center justify-center w-screen h-screen p-10 space-x-6 bg-gray-300">
 
     <!-- Component Start -->
     <div class="flex flex-col items-center w-16 h-full overflow-hidden text-gray-400 bg-gray-900 rounded">
@@ -365,6 +364,4 @@
         </a>
     </div>
     <!-- Component End  -->
-
-    </body>
 @endsection

@@ -534,6 +534,8 @@ nav .perfil:hover{
         width: 100%;
         padding-left: .5rem;
         padding-right: .5rem;
+        display: flex;
+        flex-direction: column;
         justify-content: space-between;
     }
     .display{

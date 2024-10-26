@@ -19,7 +19,7 @@ class PontoController extends Controller
         return view('ponto.index');
     }
 
-    public function gethours(string $registration, string $date): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
+    public function gethours(string $registration, string $date)
     {
         if ($registration == '0'){
             return "lal";

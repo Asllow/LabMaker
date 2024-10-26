@@ -65,7 +65,7 @@
                 <span class="ml-2 text-sm font-medium">Account</span>
             </a>
         </div>
-        <div>
+        <div class="display">
             @yield('contents')
         </div>
     </div>

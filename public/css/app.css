@@ -518,4 +518,12 @@ nav .perfil:hover{
         display: flex;
         flex-direction: row;
     }
+    .display{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem;
+        width: 100%;
+        h-screen: 100%;
+        margin-top: 2.5rem;
+    }
 }

@@ -519,6 +519,7 @@ nav .perfil:hover{
         flex-direction: row;
     }
     .nav-item{
+        margin-top: 2.5rem;
         display: flex;
         flex-direction: column;
         --tw-text-opacity: 1;
@@ -528,7 +529,7 @@ nav .perfil:hover{
         border-radius: .25rem;
         overflow-y: auto;
         align-items: center;
-        width: 15rem;
+        width: 13.5rem;
         height: 100vh;
     }
     .display{

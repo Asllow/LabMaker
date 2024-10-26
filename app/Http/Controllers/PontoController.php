@@ -22,7 +22,7 @@ class PontoController extends Controller
     public function gethours(string $registration, string $date): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
         if ($registration == 0){
-            return error(404);
+            error(404);
         }
         $user = User::firstWhere('registration', $registration) ?? 0;
         $results_all = PunchClock::where('registration', $registration)->get() ?? 0;

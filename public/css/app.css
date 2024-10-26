@@ -522,10 +522,8 @@ nav .perfil:hover{
         margin-top: 4.5rem;
         display: flex;
         flex-direction: column;
-        --tw-text-opacity: 1;
-        color: rgba(55,65,81,var(--tw-text-opacity));
-        --tw-bg-opacity: 1;
-        background-color: rgba(243,244,246,var(--tw-bg-opacity));
+        color: rgba(55,65,81,1);
+        background-color: rgba(243,244,246,1);
         border-radius: .25rem;
         overflow-y: auto;
         align-items: center;

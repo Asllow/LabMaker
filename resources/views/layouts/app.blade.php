@@ -2,6 +2,7 @@
 
 @section('main')
     <div class="flex flex-row">
+        <h2>lala</h2>
         <div>@yield('navbar')</div>
         {{--<div class="">
             <div class="text-gray-100 text-xl">

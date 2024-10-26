@@ -519,7 +519,7 @@ nav .perfil:hover{
         flex-direction: row;
     }
     .nav-item{
-        margin-top: 2.5rem;
+        margin-top: 4.5rem;
         display: flex;
         flex-direction: column;
         --tw-text-opacity: 1;
@@ -530,7 +530,7 @@ nav .perfil:hover{
         overflow-y: auto;
         align-items: center;
         width: 13.5rem;
-        height: 100vh;
+        height: calc(100vh - 4.5rem);
     }
     .display{
         display: flex;

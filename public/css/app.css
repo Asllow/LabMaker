@@ -514,4 +514,8 @@ nav .perfil:hover{
         right: -0.5rem;
         left: -0.5rem;
     }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+    }
 }

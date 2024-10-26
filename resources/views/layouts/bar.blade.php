@@ -1,5 +1,7 @@
 @extends('layouts.app')
 
 @section('dashboard_bar')
-    <h2>nalsk</h2>
+    <div>
+        <h2>BARS</h2>
+    </div>
 @endsection

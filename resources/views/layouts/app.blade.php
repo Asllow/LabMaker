@@ -3,7 +3,9 @@
 @section('main')
     <div class="flex flex-row">
         <h2>lala</h2>
-        <div>@yield('navbar')</div>
+        <div>
+            @yield('dashbar')
+        </div>
         {{--<div class="">
             <div class="text-gray-100 text-xl">
                 <div class="p-2.5 mt-1 flex items-center">
@@ -41,8 +43,8 @@
             </a>
         </div>
         --}}
-        <div class="">
-            <div>@yield('contents')</div>
+        <div>
+            @yield('contents')
         </div>
     </div>
 @endsection

@@ -535,8 +535,8 @@ nav .perfil:hover{
         padding-left: .5rem;
         padding-right: .5rem;
     }
-    .low-items{
-        padding-top: 5rem;
+    .upper-items{
+        padding-bottom: 10rem;
     }
     .display{
         display: flex;

@@ -531,6 +531,9 @@ nav .perfil:hover{
         height: calc(100vh - 4.5rem);
     }
     .itens{
+        width: 100%;
+        padding-left: .5rem;
+        padding-right: .5rem;
         justify-content: space-between;
     }
     .display{

@@ -4,7 +4,7 @@
     <div class="flex flex-row">
         <h2>lala</h2>
         <div>
-            @yield('contentsz')
+            @yield('dashboard_bar')
         </div>
         {{--<div class="">
             <div class="text-gray-100 text-xl">

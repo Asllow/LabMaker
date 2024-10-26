@@ -530,6 +530,9 @@ nav .perfil:hover{
         width: 13.5rem;
         height: calc(100vh - 4.5rem);
     }
+    .itens{
+        justify-content: space-between;
+    }
     .display{
         display: flex;
         flex-direction: column;

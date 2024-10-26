@@ -3,7 +3,7 @@
 @section('main')
     <div class="navbar">
         <div class="nav-item">
-            <div class="w-full px-2">
+            <div class="w-full px-2 itens">
                 <div class="flex flex-col items-center w-full mt-3">
                     <a class="flex items-center w-full h-12 px-3 mt-2 rounded bg-gray-300" href="{{ route('dashboard') }}">
                         <svg class="w-6 h-6 stroke-current" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

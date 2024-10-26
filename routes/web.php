@@ -38,7 +38,8 @@ Route::controller(PontoController::class)->group(function (){
     Route::get('internetest', 'internetest')
         ->name('internetest');
     Route::get('gethours/{registration?}/{date?}', 'gethours')
-        ->name('gethours');
+        ->name('gethours')
+        ->defaults('date', 0);
 });
 
 Route::middleware(['auth', 'general-access:1'])->group(function () {

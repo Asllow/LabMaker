@@ -7,10 +7,12 @@
             <strong>{{ $hours_all }} horas</strong>
         </fieldset>
     </div>
-    <div>
-        <fieldset>
-            <legend><h4>Horas do ano escolhido ({{ $date }})</h4></legend>
-            <strong>{{ $hours_query }} horas</strong>
-        </fieldset>
-    </div>
+    @if($hours_query != 0)
+        <div>
+            <fieldset>
+                <legend><h4>Horas do ano escolhido ({{ $date }})</h4></legend>
+                <strong>{{ $hours_query }} horas</strong>
+            </fieldset>
+        </div>
+    @endif
 </div>

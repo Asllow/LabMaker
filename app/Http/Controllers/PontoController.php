@@ -22,7 +22,7 @@ class PontoController extends Controller
     public function gethours(string $registration, string $date)
     {
         if ($registration == '0'){
-            return "lal";
+            abort(404);
         }
         $user = User::firstWhere('registration', $registration) ?? 0;
         $results_all = PunchClock::where('registration', $registration)->get() ?? 0;

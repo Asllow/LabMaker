@@ -518,6 +518,19 @@ nav .perfil:hover{
         display: flex;
         flex-direction: row;
     }
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        --tw-text-opacity: 1;
+        color: rgba(55,65,81,var(--tw-text-opacity));
+        --tw-bg-opacity: 1;
+        background-color: rgba(243,244,246,var(--tw-bg-opacity));
+        border-radius: .25rem;
+        overflow-y: auto;
+        align-items: center;
+        width: 15rem;
+        height: 100vh;
+    }
     .display{
         display: flex;
         flex-direction: column;

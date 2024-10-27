@@ -15,7 +15,7 @@
             </div>
             <div class="frontbox">
                 <div class="login">
-                    <h2>Entrar</h2>
+                    <h2 class="title">Entrar</h2>
                     <p>Entrar na sua conta</p>
                     <form class="inputbox" method="post" action="{{ route('entrar.action') }}">
                         @csrf

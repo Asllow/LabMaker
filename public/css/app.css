@@ -602,7 +602,7 @@ nav .perfil:hover{
     }
     .frontbox{
         background-color: var(--body-color);
-        border: 3px solid var(--base-color-second);
+        border: 3px solid var(--base-color);
         border-radius: .5rem;
         height: 100%;
         width: 50%;
@@ -627,8 +627,8 @@ nav .perfil:hover{
         margin-top: 25%;
         margin-left: 2rem;
     }
-    .loginMsg .switch1,
-    .signupMsg .switch1 {
+    .loginMsg #switch1,
+    .signupMsg #switch1 {
         border: 3px var(--body-color);
         border-radius: .7rem;
         color: var(--body-color);
@@ -642,11 +642,6 @@ nav .perfil:hover{
     .login, .signup{
         padding: 20px;
         text-align: center;
-    }
-    .login h2,
-    .signup h2 {
-        color: #35B729;
-        font-size:22px;
     }
 
     .inputbox{

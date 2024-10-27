@@ -9,7 +9,7 @@
                 <div class="loginMsg">
                     <div class="textcontent">
                         <p class="title-alt">Não tem uma conta ainda?</p>
-                        <button id="switch1">Sign Up</button>
+                        <button id="switch1" href="{{ route('cadastrar') }}" >Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="">
                             <div class="">
-                                <div class="">
+                                <div class="checkbox">
                                     <input name="remember" id="remember" aria-describedby="remember" type="checkbox" class="" required="">
                                 </div>
                                 <div class="">
@@ -56,7 +56,6 @@
                         </div>
                         <a href="#" class="">Esqueceu a senha?</a>
                         <button type="submit" class="">Entrar</button>
-                        <p class="">Não tem uma conta ainda? <a href="{{ route('cadastrar') }}" class="">Cadastrar</a></p>
                     </form>
                 </div>
             </div>

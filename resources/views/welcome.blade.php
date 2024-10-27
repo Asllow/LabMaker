@@ -7,7 +7,6 @@
 @section('main')
     <main>
         <section class="section">
-            <h1>Teste</h1>
         </section>
     </main>
     <footer></footer>

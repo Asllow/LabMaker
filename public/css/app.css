@@ -559,7 +559,6 @@ nav .perfil:hover{
         display: flex;
         padding-left: .75rem;
         padding-right: .75rem;
-
         border-radius: .5rem;
         align-items: center;
         width: 100%;
@@ -570,6 +569,21 @@ nav .perfil:hover{
     }
     .selector:hover,
     .selector.active {
+        background-color: rgba(209,213,219,1);
+    }
+    .selector-2{
+        color: var(--title-color);
+        margin-top: auto;
+        display: flex;
+        height: 4rem;
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(229,231,235, 1);
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+    }
+    .selector-2:hover{
         background-color: rgba(209,213,219,1);
     }
 }

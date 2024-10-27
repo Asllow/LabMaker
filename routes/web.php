@@ -8,7 +8,8 @@ use App\Http\Controllers\PontoController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', function () {
-    return view('welcome');
+    $page = 'home';
+    return view('welcome', compact('page'));
 })->name('welcome');
 
 Route::controller(AuthController::class)->group(function () {

@@ -8,6 +8,7 @@ class DashboardController extends Controller
 {
     public function meuperfil()
     {
-        return view('perfil');
+        $page = 'perfil';
+        return view('perfil', compact('page'));
     }
 }

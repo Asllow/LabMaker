@@ -23,7 +23,8 @@ class AuthController extends Controller
 
     public function cadastrar(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('auth/cadastrar');
+        $page = 'cadastrar';
+        return view('auth/cadastrar', compact('page'));
     }
 
     public function salvarCadastro(Request $request): RedirectResponse
@@ -66,7 +67,8 @@ class AuthController extends Controller
     }
 
     public function entrar(){
-        return view('auth/entrar');
+        $page = 'entrar';
+        return view('auth/entrar', compact('page'));
     }
 
     public function entrarAction(Request $request){

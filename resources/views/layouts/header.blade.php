@@ -30,7 +30,7 @@
                 </a>
                 <div class='menu'>
                     <ul class='grid'>
-                        <li><a class='title' id='index' href='{{route('welcome')}}'>Início</a></li>
+                        <li><a class='title @if($page=='home') active @endif' id='index' href='{{route('welcome')}}'>Início</a></li>
                         @auth()
                             <li><a class='title' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <div class="separator"></div>

@@ -17,7 +17,8 @@ class ProductController extends Controller
     public function index(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
         $product = Product::orderBy('created_at', 'DESC')->get();
-        return view('products.index', compact('product'));
+        $page = 'product';
+        return view('products.index', compact('product', 'page'));
     }
 
     /**
@@ -25,7 +26,8 @@ class ProductController extends Controller
      */
     public function create(): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
-        return view('products.create');
+        $page = 'product';
+        return view('products.create', compact('page'));
     }
 
     /**
@@ -44,7 +46,8 @@ class ProductController extends Controller
     public function show(string $id): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
         $product = Product::findOrFail($id);
-        return view('products.show', compact('product'));
+        $page = 'product';
+        return view('products.show', compact('product', 'page'));
     }
 
     /**
@@ -53,7 +56,8 @@ class ProductController extends Controller
     public function edit(string $id): Factory|Application|View|\Illuminate\Contracts\Foundation\Application
     {
         $product = Product::findOrFail($id);
-        return view('products.edit', compact('product'));
+        $page = 'product';
+        return view('products.edit', compact('product', 'page'));
     }
 
     /**

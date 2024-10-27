@@ -581,7 +581,7 @@ nav .perfil:hover{
         justify-content: center;
         background-color: rgba(229,231,235, 1);
         border-radius: .5rem;
-        margin-bottom: 1rem;
+        margin-bottom: .5rem;
     }
     .selector-2:hover{
         background-color: rgba(209,213,219,1);

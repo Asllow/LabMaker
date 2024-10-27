@@ -685,7 +685,6 @@ nav .perfil:hover{
         cursor: pointer;
     }
     .container2{
-        border:1px solid var(--title-color);
         width: 38rem;
         height: 22rem;
         position: absolute;

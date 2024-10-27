@@ -4,15 +4,6 @@
 
 @section('main')
     <section class="section">
-        <div class="">
-            <div class="">Entrar</div>
-            <div class="">
-                <div class="">
-                    <h1 class="">Entrar na sua conta</h1>
-
-                </div>
-            </div>
-        </div>
         <div class="container2">
             <div class="backbox">
                 <div class="loginMsg">
@@ -69,7 +60,6 @@
                     </form>
                 </div>
             </div>
-            <!-- frontbox -->
         </div>
     </section>
 @endsection

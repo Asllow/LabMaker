@@ -627,8 +627,8 @@ nav .perfil:hover{
         margin-top: 25%;
         margin-left: 2rem;
     }
-    .loginMsg button,
-    .signupMsg button {
+    .loginMsg .switch1,
+    .signupMsg .switch1 {
         border: 3px var(--body-color);
         border-radius: .7rem;
         color: var(--body-color);

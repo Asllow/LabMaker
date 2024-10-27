@@ -627,7 +627,8 @@ nav .perfil:hover{
         font-weight: 100;
     }
     .textcontent{
-        color:white;
+        border: 1px solid var(--title-color);
+        color: var(--body-color);
         margin-top:65px;
         margin-left: 12%;
     }

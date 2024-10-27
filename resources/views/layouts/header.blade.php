@@ -32,7 +32,7 @@
                     <ul class='grid'>
                         <li><a class='title @if($page=='home') active @endif' id='index' href='{{route('welcome')}}'>Início</a></li>
                         @auth()
-                            <li><a class='title @if($page=='dashboard') active @endif' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
+                            <li><a class='title @if($page=='dashboard' or $page=='product' or $page=='perfil') active @endif' id='dashboard' href='{{route('dashboard')}}'>Dashboard</a></li>
                             <div class="separator"></div>
                             <div data-dropdown class='perfil' x-data="{ open: false }" @click="open = true" :class="{ 'bg-gray-200 rounded-md': open }">
                                 <div class="titles">

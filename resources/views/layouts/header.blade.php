@@ -54,7 +54,7 @@
                                 <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
                             @elseif($page=='cadastrar')
                                 <li><a class='title active' id='entrar' href='{{route('cadastrar')}}'>Cadastrar</a></li>
-                                <a class='bi bi-person-circle' href='{{route('cadastar')}}'></a>
+                                <a class='bi bi-person-circle' href='{{route('cadastrar')}}'></a>
                             @endif
                         @endguest
                         <div class='triangulo'>

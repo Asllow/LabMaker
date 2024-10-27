@@ -94,6 +94,9 @@ body {
 .section {
     padding: calc(3rem + var(--header-height)) 0;
 }
+.section-one {
+    padding: calc(2rem + var(--header-height)) 0;
+}
 .section .title {
     margin-bottom: 1rem;
 }

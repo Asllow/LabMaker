@@ -49,8 +49,13 @@
                             </div>
                         @endauth
                         @guest()
-                            <li><a class='title' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
-                            <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
+                            @if($page!='cadastrar')
+                                <li><a class='title @if($page == 'entrar') active @endif' id='entrar' href='{{route('entrar')}}'>Entrar</a></li>
+                                <a class='bi bi-person-circle' href='{{route('entrar')}}'></a>
+                            @elseif($page=='cadastrar')
+                                <li><a class='title active' id='entrar' href='{{route('cadastrar')}}'>Cadastrar</a></li>
+                                <a class='bi bi-person-circle' href='{{route('cadastar')}}'></a>
+                            @endif
                         @endguest
                         <div class='triangulo'>
                             <a class='logo' href='{{route('welcome')}}'>

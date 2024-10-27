@@ -626,17 +626,17 @@ nav .perfil:hover{
         color: var(--body-color);
         margin-top: 25%;
         margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
     .loginMsg #switch1,
     .signupMsg #switch1 {
-        border: 3px outset var(--body-color);
+        border: 3px solid var(--body-color);
         border-radius: .7rem;
-        background-color: var(--base-color-alt);
-        color: var(--body-color);
-        box-sizing: content-box;
+        width: fit-content;
         font-weight: 500;
         padding:.7rem;
-        margin-top: 1.5rem;
     }
 
     /* front box content*/

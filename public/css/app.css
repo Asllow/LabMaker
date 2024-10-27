@@ -561,6 +561,7 @@ nav .perfil:hover{
     }
     .display::-webkit-scrollbar{
         margin-top: 2rem;
+        width: 30px;
     }
     .selector {
         display: flex;

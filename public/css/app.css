@@ -686,5 +686,11 @@ nav .perfil:hover{
     .login input.checkbox{
         width: 1rem;
         height: 1rem;
+        margin: 0;
+        padding-right: 1rem;
+    }
+    .rememberme {
+        display: flex;
+        align-items: center;
     }
 }

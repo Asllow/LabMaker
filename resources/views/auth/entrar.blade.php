@@ -4,7 +4,7 @@
 
 @section('main')
     <section class="section">
-        <div class="">
+        <div class="container">
             <div class="">Entrar</div>
             <div class="">
                 <div class="">
@@ -51,6 +51,28 @@
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="container">
+            <div class="backbox">
+                <div class="loginMsg">
+                    <div class="textcontent">
+                        <p class="title-alt">Não tem uma conta ainda?</p>
+                        <button id="switch1">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="frontbox">
+                <div class="login">
+                    <h2>LOG IN</h2>
+                    <div class="inputbox">
+                        <input type="text" name="email" placeholder="  EMAIL">
+                        <input type="password" name="password" placeholder="  PASSWORD">
+                    </div>
+                    <p>FORGET PASSWORD?</p>
+                    <button>LOG IN</button>
+                </div>
+            </div>
+            <!-- frontbox -->
         </div>
     </section>
 @endsection

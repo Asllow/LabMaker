@@ -47,8 +47,6 @@
                             <div class="">
                                 <div class="">
                                     <input name="remember" id="remember" aria-describedby="remember" type="checkbox" class="checkbox" required="">
-                                </div>
-                                <div class="">
                                     <label for="remember" class="">Lembrar-se de mim</label>
                                 </div>
                             </div>

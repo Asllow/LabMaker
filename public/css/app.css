@@ -559,6 +559,9 @@ nav .perfil:hover{
         margin-top: 3.5rem;
         overflow: auto;
     }
+    .display::-webkit-scrollbar{
+        margin-top: 2rem;
+    }
     .selector {
         display: flex;
         padding-left: .75rem;

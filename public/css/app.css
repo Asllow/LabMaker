@@ -528,7 +528,7 @@ nav .perfil:hover{
         color: rgba(55,65,81,1);
         background-color: rgba(243,244,246,1);
         border-radius: .25rem;
-        overflow-y: auto;
+        overflow-y: hidden;
         align-items: center;
         width: 13.5rem;
         height: calc(100vh - 4.5rem);

@@ -557,6 +557,7 @@ nav .perfil:hover{
         width: 100%;
         height: calc(100vh - 4.5rem);
         margin-top: 3.5rem;
+        overflow: auto;
     }
     .selector {
         display: flex;

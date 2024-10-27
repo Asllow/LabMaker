@@ -658,6 +658,8 @@ nav .perfil:hover{
         font: 500 .9rem var(--body-font);
         color: var(--text-color);
         border-bottom: 1px solid var(--text-color);
+        box-sizing:  border-box;
+        -webkit-appearance:  none;
     }
     .login button,
     .signup button{

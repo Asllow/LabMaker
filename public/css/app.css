@@ -683,7 +683,7 @@ nav .perfil:hover{
         transform: translate(-50%, -50%);
         display: inline-flex;
     }
-    .login input .checkbox{
+    .login input.checkbox{
         width: 1rem;
         height: 1rem;
     }

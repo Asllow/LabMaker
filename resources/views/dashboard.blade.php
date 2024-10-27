@@ -4,6 +4,6 @@
 
 @section('contents')
 <div>
-    <h1 class="subtitle">Esse site e sistema de controle está em fase de DESENVOLVIMENTO, qualquer duvída contate o suporte.</h1>
+    <h1 class="title">Esse site e sistema de controle está em fase de DESENVOLVIMENTO, qualquer duvída contate o suporte.</h1>
 </div>
 @endsection

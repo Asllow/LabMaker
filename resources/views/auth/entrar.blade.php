@@ -9,7 +9,7 @@
                 <div class="loginMsg">
                     <div class="textcontent">
                         <p class="title-alt">Não tem uma conta ainda?</p>
-                        <button id="switch1" href="{{ route('cadastrar') }}" >Cadastrar</button>
+                        <a id="switch1" href="{{ route('cadastrar') }}" >Cadastrar</a>
                     </div>
                 </div>
             </div>

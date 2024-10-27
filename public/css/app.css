@@ -602,7 +602,7 @@ nav .perfil:hover{
     }
     .frontbox{
         background-color: var(--body-color);
-        border: 3px solid var(--base-color);
+        border: 3px solid var(--base-color-second);
         border-radius: .5rem;
         height: 100%;
         width: 50%;
@@ -615,8 +615,8 @@ nav .perfil:hover{
     }
     .loginMsg .title-alt,
     .signupMsg .title-alt{
-        font-weight: 300;
-        font-size: 23px;
+        font-weight: 700;
+        font-size: 1.5rem;
     }
     .loginMsg p,
     .signupMsg p {
@@ -624,20 +624,18 @@ nav .perfil:hover{
     }
     .textcontent{
         color: var(--body-color);
-        margin-top: 4rem;
+        margin-top: 25%;
         margin-left: 2rem;
     }
     .loginMsg button,
     .signupMsg button {
-        background-color: #404040;
-        border: 2px solid white;
-        border-radius: 10px;
-        color:white;
-        font-size: 12px;
+        border: 3px var(--body-color);
+        border-radius: .7rem;
+        color: var(--body-color);
         box-sizing: content-box;
-        font-weight: 300;
-        padding:10px;
-        margin-top: 20px;
+        font-weight: 500;
+        padding:.7rem;
+        margin-top: 1.5rem;
     }
 
     /* front box content*/
@@ -681,7 +679,7 @@ nav .perfil:hover{
         cursor: pointer;
     }
     .container2{
-        width: 42rem;
+        width: 50rem;
         height: 26.7rem;
         position: absolute;
         top:50%;

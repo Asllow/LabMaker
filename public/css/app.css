@@ -555,7 +555,7 @@ nav .perfil:hover{
         flex-direction: column;
         padding: 2rem 1rem;
         width: 100%;
-        h-screen: 100%;
+        height: calc(100vh - 4.5rem);
         margin-top: 3.5rem;
     }
     .selector {

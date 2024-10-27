@@ -602,7 +602,7 @@ nav .perfil:hover{
     }
     .frontbox{
         background-color: var(--body-color);
-        border: 3px solid var(--title-color);
+        border: 3px solid var(--base-color);
         border-radius: .5rem;
         height: 100%;
         width: 50%;

@@ -3,7 +3,7 @@
 @section('title', 'Cadastrar')
 
 @section('main')
-    <section class="">
+    <section class="overflow-y-hidden">
         <div class="">
             <div class="">
                 Cadastrar

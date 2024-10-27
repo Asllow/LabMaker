@@ -684,4 +684,14 @@ nav .perfil:hover{
         bottom: 30px;
         cursor: pointer;
     }
+    .container2{
+        /*border:1px solid white;*/
+        width: 600px;
+        height: 350px;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        display: inline-flex;
+    }
 }

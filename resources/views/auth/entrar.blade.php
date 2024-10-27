@@ -4,7 +4,7 @@
 
 @section('main')
     <section class="section">
-        <div class="container">
+        <div class="">
             <div class="">Entrar</div>
             <div class="">
                 <div class="">
@@ -52,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container2">
             <div class="backbox">
                 <div class="loginMsg">
                     <div class="textcontent">

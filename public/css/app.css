@@ -686,8 +686,7 @@ nav .perfil:hover{
     .login input.checkbox{
         width: 1rem;
         height: 1rem;
-        margin: 0;
-        padding-right: 1rem;
+        margin: 0 1rem 0 0;
     }
     .rememberme {
         display: flex;

@@ -3,7 +3,7 @@
 @section('title', 'Entrar')
 
 @section('main')
-    <section class="">
+    <section class="section">
         <div class="">
             <div class="">Entrar</div>
             <div class="">

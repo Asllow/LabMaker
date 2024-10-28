@@ -734,5 +734,6 @@ nav .perfil:hover{
     .input-icon svg {
         margin-bottom: 1rem;
         padding-right: 0.5rem;
+        width: 1.8rem;
     }
 }

@@ -654,7 +654,7 @@ nav .perfil:hover{
         width: 100%;
         height: 2.5rem;
         border: none;
-        margin-bottom: 1.1rem;
+        margin-bottom: 1rem;
         font: 500 .9rem var(--body-font);
         color: var(--text-color);
         border-bottom: 1px solid var(--text-color);
@@ -713,8 +713,10 @@ nav .perfil:hover{
         -webkit-box-shadow: none;
         transition: background-color 5000s ease-in-out 0s;
     }
-    .adjust a{
+    .adjust{
         margin: .9rem 0;
+    }
+    .adjust a{
         color: var(--base-color-alt);
     }
 }

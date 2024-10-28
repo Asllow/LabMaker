@@ -661,11 +661,10 @@ nav .perfil:hover{
         box-sizing:  border-box;
         -webkit-appearance:  none;
     }
-    .login input:focus,
     .login input:focus-visible,
-    .signup input:focus,
     .signup input:focus-visible{
         border-bottom: 1px solid var(--base-color);
+        outline: none;
     }
     .login button,
     .signup button{

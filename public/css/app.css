@@ -661,8 +661,8 @@ nav .perfil:hover{
         box-sizing:  border-box;
         -webkit-appearance:  none;
     }
-    .login input:active,
-    .signup input:active{
+    .login input:focus,
+    .signup input:focus{
         border-bottom: 1px solid var(--base-color);
     }
     .login button,

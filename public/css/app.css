@@ -687,7 +687,7 @@ nav .perfil:hover{
         border: 2px solid var(--text-color);
         width: 1rem;
         height: 1rem;
-        margin: 0 .7rem 0 0;
+        margin: 0 .7rem 0 .14rem;
         /*noinspection CssInvalidPropertyValue*/
         -webkit-appearance: auto;
     }
@@ -717,7 +717,7 @@ nav .perfil:hover{
         margin: .9rem 0;
     }
     .adjust a{
-        color: var(--base-color-alt);
+        border-color: var(--base-color);
     }
     .login input:focus-visible,
     .signup input:focus-visible{

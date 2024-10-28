@@ -717,7 +717,7 @@ nav .perfil:hover{
         margin: .9rem 0;
     }
     .adjust a{
-        border-color: var(--base-color);
+        color: var(--base-color-alt);
     }
     .login input:focus-visible,
     .signup input:focus-visible{
@@ -725,7 +725,7 @@ nav .perfil:hover{
     }
     .login input:focus,
     .signup input:focus{
-        border-bottom: 1px solid var(--base-color);
+        border: 2px solid var(--base-color);
     }
     .input-icon{
         display: flex;

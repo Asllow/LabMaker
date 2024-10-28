@@ -50,9 +50,10 @@
                                     <label for="remember" class="">Lembrar-se de mim</label>
                                 </div>
                             </div>
-
                         </div>
-                        <a href="#" class="">Esqueceu a senha?</a>
+                        <div>
+                            <a href="#" class="">Esqueceu a senha?</a>
+                        </div>
                         <button type="submit" class="">Entrar</button>
                     </form>
                 </div>

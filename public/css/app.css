@@ -660,6 +660,7 @@ nav .perfil:hover{
         border-bottom: 1px solid var(--text-color);
         box-sizing:  border-box;
         -webkit-appearance:  none;
+        padding-left: 0.5rem;
     }
     .login button,
     .signup button{

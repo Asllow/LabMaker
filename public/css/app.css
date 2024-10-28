@@ -692,7 +692,7 @@ nav .perfil:hover{
         -webkit-appearance: auto;
     }
     .login input.checkbox:hover{
-        color: var(--base-color);
+        border: 2px solid var(--base-color);
     }
     .rememberme {
         display: flex;
@@ -717,7 +717,7 @@ nav .perfil:hover{
         margin: .9rem 0;
     }
     .adjust a{
-        color: var(--base-color-alt);
+        color: var(--base-color);
     }
     .login input:focus-visible,
     .signup input:focus-visible{
@@ -725,7 +725,7 @@ nav .perfil:hover{
     }
     .login input:focus,
     .signup input:focus{
-        border: 2px solid var(--base-color);
+        border-bottom: 1px solid var(--base-color);
     }
     .input-icon{
         display: flex;

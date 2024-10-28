@@ -51,7 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="adjust">
                             <a href="#" class="">Esqueceu a senha?</a>
                         </div>
                         <button type="submit" class="">Entrar</button>

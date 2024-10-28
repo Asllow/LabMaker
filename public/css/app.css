@@ -726,4 +726,12 @@ nav .perfil:hover{
     .signup input:focus{
         border-bottom: 1px solid var(--base-color);
     }
+    .input-icon{
+        display: flex;
+        align-items: center;
+    }
+    .input-icon svg {
+        margin-bottom: 1rem;
+        padding-right: 0.5rem;
+    }
 }

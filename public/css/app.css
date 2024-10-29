@@ -768,4 +768,9 @@ nav .perfil:hover{
     .step.finish {
         background-color: var(--base-color-alt);
     }
+    .step-ball{
+        position: absolute;
+        margin-left: 8rem;
+        margin-top: 16rem;
+    }
 }

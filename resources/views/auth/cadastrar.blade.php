@@ -19,11 +19,17 @@
                     <p>Crie uma conta</p>
                     <form class="inputbox" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
-                        <div style="text-align:center;margin-top:40px;">
+                        <div class="step-ball">
                             <span class="step"></span>
                             <span class="step"></span>
                             <span class="step"></span>
                             <span class="step"></span>
+                        </div>
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
+                            </div>
                         </div>
                         <div class="tab">
                             <div>
@@ -126,12 +132,6 @@
                                         Eu aceito os<a class="" href="#">Termos e Condições</a>
                                     </label>
                                 </div>
-                            </div>
-                        </div>
-                        <div style="overflow:auto;">
-                            <div style="float:right;">
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
                             </div>
                         </div>
                     </form>

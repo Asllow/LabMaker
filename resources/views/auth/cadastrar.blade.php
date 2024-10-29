@@ -19,26 +19,28 @@
                     <p>Crie uma conta</p>
                     <form class="inputbox" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
-                        <div>
-                            <label for="name" class="">Nome</label>
-                            <input type="text" name="name" id="name" class="" placeholder="Seu nome" required=""  autocomplete="off" value="{{ old('name') }}">
-                            @error('name')
-                            <span class="text-red-600">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div>
-                            <label for="last_name" class="">Sobrenome</label>
-                            <input type="last_name" name="last_name" id="last_name" class="" placeholder="Seu sobrenome" required="" autocomplete="off" value="{{ old('last_name') }}">
-                            @error('last_name')
-                            <span class="text-red-600">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div>
-                            <label for="email" class="">Email</label>
-                            <input type="email" name="email" id="email" class="" placeholder="nome@instituição.com" required="" autocomplete="off" value="{{ old('email') }}">
-                            @error('email')
-                            <span class="text-red-600">{{ $message }}</span>
-                            @enderror
+                        <div class="tab">
+                            <div>
+                                <label for="name" class="">Nome</label>
+                                <input type="text" name="name" id="name" class="" placeholder="Seu nome" required=""  autocomplete="off" value="{{ old('name') }}">
+                                @error('name')
+                                <span class="text-red-600">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div>
+                                <label for="last_name" class="">Sobrenome</label>
+                                <input type="last_name" name="last_name" id="last_name" class="" placeholder="Seu sobrenome" required="" autocomplete="off" value="{{ old('last_name') }}">
+                                @error('last_name')
+                                <span class="text-red-600">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div>
+                                <label for="email" class="">Email</label>
+                                <input type="email" name="email" id="email" class="" placeholder="nome@instituição.com" required="" autocomplete="off" value="{{ old('email') }}">
+                                @error('email')
+                                <span class="text-red-600">{{ $message }}</span>
+                                @enderror
+                            </div>
                         </div>
                         <div>
                             <label for="registration" class="">Número de matrícula</label>
@@ -46,7 +48,7 @@
                         </div>
                         <div class="">
                             <div class="">
-                                <input type="checkbox" id="registrationfalse" name="registrationfalse" aria-describedby="registrationfalse" class="">
+                                <input type="checkbox" class='checkbox' id="registrationfalse" name="registrationfalse" aria-describedby="registrationfalse" class="">
                             </div>
                             <div class="">
                                 <label for="registrationfalse" class="">

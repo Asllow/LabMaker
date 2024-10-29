@@ -108,7 +108,7 @@
                         </div>
                         <div class="">
                             <div class="">
-                                <input id="terms" aria-describedby="terms" type="checkbox" class="" required="">
+                                <input id="terms" aria-describedby="terms" type="checkbox" class="checkbox" required="">
                             </div>
                             <div class="ml-3 text-sm">
                                 <label for="terms" class="">

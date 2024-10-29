@@ -6,7 +6,7 @@
     <section class="section">
         <div class="container2">
             <div class="backbox">
-                <div class="signupMsg">
+                <div class="loginMsg">
                     <div class="textcontent">
                         <p class="title-alt">Já tem uma conta?</p>
                         <a id="switch1" href="{{ route('entrar') }}" class="">Entre aqui</a>

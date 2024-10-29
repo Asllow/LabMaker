@@ -785,4 +785,7 @@ nav .perfil:hover{
         position: absolute;
         margin-top: 15rem;
     }
+    .error {
+        color: rgba(220,38,38,1 );
+    }
 }

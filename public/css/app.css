@@ -778,13 +778,13 @@ nav .perfil:hover{
         margin-top: 15rem;
     }
     .button-pass #prevBtn{
-        right: 0;
-        margin-right: 1rem;
+        left: 0;
+        margin-left: 1rem;
         position: absolute;
     }
     .button-pass #nextBtn{
-        left: 0;
-        margin-left: 1rem;
+        right: 0;
+        margin-right: 1rem;
         position: absolute;
     }
 }

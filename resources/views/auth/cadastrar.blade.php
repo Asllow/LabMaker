@@ -25,11 +25,9 @@
                             <span class="step"></span>
                             <span class="step"></span>
                         </div>
-                        <div style="overflow:auto;">
-                            <div style="float:right;">
-                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
-                            </div>
+                        <div class="button-pass">
+                            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                            <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
                         </div>
                         <div class="tab">
                             <div>

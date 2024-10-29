@@ -746,7 +746,8 @@ nav .perfil:hover{
     }
     .login input.invalid,
     .signup input.invalid{
-        background-color: rgba(225, 81, 81, 0.82);
+        background-color: rgba(255, 0, 0, 0.3);
+        border-radius: .7rem .7rem 0 0;
     }
     .tab {
         display: none;

@@ -134,7 +134,6 @@
                             <span class="step"></span>
                             <span class="step"></span>
                         </div>
-                        <button type="submit" class="">Criar uma conta</button>
                     </form>
                 </div>
             </div>
@@ -155,9 +154,9 @@
                 document.getElementById("prevBtn").style.display = "inline";
             }
             if (n === (x.length - 1)) {
-                document.getElementById("nextBtn").innerHTML = "Submit";
+                document.getElementById("nextBtn").innerHTML = "Criar conta";
             } else {
-                document.getElementById("nextBtn").innerHTML = "Next";
+                document.getElementById("nextBtn").innerHTML = "Próximo";
             }
             // ... and run a function that displays the correct step indicator:
             fixStepIndicator(n)

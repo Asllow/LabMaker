@@ -795,4 +795,11 @@ nav .perfil:hover{
         color: rgba(220,38,38,1 );
         font-size: 0.83rem;
     }
+    .error.geral{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 1rem;
+        margin-top: 1.8rem;
+    }
 }

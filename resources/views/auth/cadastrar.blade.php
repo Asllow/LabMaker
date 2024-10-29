@@ -20,7 +20,7 @@
                     <form class="inputbox" id="createform" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
                         @if($errors->any())
-                            <span class="error">Houve um erro, tente novamente.</span>
+                            <span class="error geral">Houve um erro, tente novamente.</span>
                         @endif
                         <div class="step-ball">
                             <span class="step"></span>

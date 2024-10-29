@@ -19,9 +19,9 @@
                     <p>Crie uma conta</p>
                     <form class="inputbox" id="createform" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
-                        @error('all_errors')
-                        <span class="error">Houve um erro, tente novamente.</span>
-                        @enderror
+                        @if($errors->any())
+                            <span class="error">Houve um erro, tente novamente.</span>
+                        @endif
                         <div class="step-ball">
                             <span class="step"></span>
                             <span class="step"></span>

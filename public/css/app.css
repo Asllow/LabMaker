@@ -773,18 +773,16 @@ nav .perfil:hover{
         margin-left: 8rem;
         margin-top: 16rem;
     }
-    .button-pass{
-        position: absolute;
-        margin-top: 15rem;
-    }
     .button-pass #prevBtn{
         left: 0;
         margin-left: 1rem;
-        position: inherit;
+        position: absolute;
+        margin-top: 15rem;
     }
     .button-pass #nextBtn{
         right: 0;
         margin-right: 1rem;
-        position: inherit;
+        position: absolute;
+        margin-top: 15rem;
     }
 }

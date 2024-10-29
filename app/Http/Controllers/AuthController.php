@@ -49,11 +49,12 @@ class AuthController extends Controller
                 ->uncompromised()]
         ])->validate();
 
-
+        $new_name = ucwords($request->name);
+        $new_last_name = ucwords($request->lats_name);
 
         User::create([
-            'name' => $request->name,
-            'last_name' => $request->last_name,
+            'name' => $new_name,
+            'last_name' => $new_last_name,
             'registration' => $request->registration,
             'course' => $request->course,
             'birth_date' => $request->birth_date,

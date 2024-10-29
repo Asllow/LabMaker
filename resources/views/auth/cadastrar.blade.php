@@ -69,8 +69,8 @@
                                 <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
-                            <div>
-                                <label for="course" class="course">Seu curso</label>
+                            <div class="course">
+                                <label for="course">Seu curso</label>
                                 <select name="course" id="course" class="course-selector" required>
                                     <option selected disabled>Selecione seu curso</option>
                                     <option value="1">Engenharia Mecatrônica</option>

@@ -39,7 +39,7 @@ class AuthController extends Controller
             'registration' => new ValidadeRegistration($registrationfalse),
             'course' => 'required',
             'birth_date' => 'required|date|before:-13 years',
-            'email' => 'required|email',
+            'email' => 'unique:users,email|required|email',
             'password' => ['required', 'confirmed',
             Password::min(8)
                 ->letters()
@@ -48,6 +48,8 @@ class AuthController extends Controller
                 ->symbols()
                 ->uncompromised()]
         ])->validate();
+
+
 
         User::create([
             'name' => $request->name,

@@ -8,8 +8,8 @@
             <div class="backbox">
                 <div class="signupMsg">
                     <div class="textcontent">
-                        <p class="title-alt">Não tem uma conta ainda?</p>
-                        <a id="switch1" href="{{ route('cadastrar') }}" >Cadastrar</a>
+                        <p class="title-alt">Já tem uma conta?</p>
+                        <a id="switch1" href="{{ route('entrar') }}" class="">Entre aqui</a>
                     </div>
                 </div>
             </div>
@@ -120,12 +120,6 @@
                         <button type="submit" class="">
                             Criar uma conta
                         </button>
-                        <p class="">
-                            Já tem uma conta?
-                            <a href="{{ route('entrar') }}" class="">
-                                Entre aqui
-                            </a>
-                        </p>
                     </form>
                 </div>
             </div>

@@ -774,6 +774,7 @@ nav .perfil:hover{
         margin-top: 16rem;
     }
     .button-pass{
+        position: absolute;
         margin-top: 15rem;
     }
     .button-pass #prevBtn{

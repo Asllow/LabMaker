@@ -608,10 +608,12 @@ nav .perfil:hover{
         width: 50%;
         z-index: 10;
         position: absolute;
-        right:0;
         margin-right: 3%;
         margin-left: 3%;
         transition: right .8s ease-in-out;
+    }
+    .frontbox .login{
+        right:0;
     }
     .loginMsg .title-alt,
     .signupMsg .title-alt{
@@ -626,9 +628,14 @@ nav .perfil:hover{
         color: var(--body-color);
         margin-top: 5rem;
         margin-left: 2rem;
+        margin-right: 8.4rem;
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        position: fixed;
+    }
+    .signupMsg .textcontent{
+        right: 0;
     }
     .loginMsg #switch1,
     .signupMsg #switch1 {

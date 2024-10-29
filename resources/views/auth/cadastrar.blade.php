@@ -19,7 +19,6 @@
                     <p>Crie uma conta</p>
                     <form class="inputbox" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
-                        <
                         <div>
                             <label for="name" class="">Nome</label>
                             <input type="text" name="name" id="name" class="" placeholder="Seu nome" required=""  autocomplete="off" value="{{ old('name') }}">

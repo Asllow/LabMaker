@@ -3,17 +3,21 @@
 @section('title', 'Cadastrar')
 
 @section('main')
-    <section class="overflow-y-hidden">
-        <div class="">
-            <div class="">
-                Cadastrar
+    <section class="section">
+        <div class="container2">
+            <div class="backbox">
+                <div class="signupMsg">
+                    <div class="textcontent">
+                        <p class="title-alt">Não tem uma conta ainda?</p>
+                        <a id="switch1" href="{{ route('cadastrar') }}" >Cadastrar</a>
+                    </div>
+                </div>
             </div>
-            <div class="">
-                <div class="">
-                    <h1 class="">
-                        Criar uma conta
-                    </h1>
-                    <form action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
+            <div class="frontbox">
+                <div class="signup">
+                    <h2 class="title">Cadastrar</h2>
+                    <p>Crie uma conta</p>
+                    <form class="inputbox" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
                         <div>
                             <label for="name" class="">Nome</label>

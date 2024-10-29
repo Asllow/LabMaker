@@ -19,32 +19,8 @@
                     <p>Crie uma conta</p>
                     <form class="inputbox" id="createform" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
-                        @error('name')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('last_name')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('registration')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('course')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('birth_date')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('email')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('phone')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('password')
-                        <span class="error">{{ $message }}</span>
-                        @enderror
-                        @error('password_confirmation')
-                        <span class="error">{{ $message }}</span>
+                        @error('all_errors')
+                        <span class="error">Houve um erro, tente novamente.</span>
                         @enderror
                         <div class="step-ball">
                             <span class="step"></span>
@@ -60,14 +36,23 @@
                             <div>
                                 <label for="name" class="">Nome</label>
                                 <input type="text" name="name" id="name" class="" placeholder="Seu nome" required=""  autocomplete="off" value="{{ old('name') }}">
+                                @error('name')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div>
                                 <label for="last_name" class="">Sobrenome</label>
                                 <input type="last_name" name="last_name" id="last_name" class="" placeholder="Seu sobrenome" required="" autocomplete="off" value="{{ old('last_name') }}">
+                                @error('last_name')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div>
                                 <label for="email" class="">Email</label>
                                 <input type="email" name="email" id="email" class="" placeholder="nome@instituição.com" required="" autocomplete="off" value="{{ old('email') }}">
+                                @error('email')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="tab">
@@ -84,6 +69,9 @@
                                         Não possuo número de matrícula
                                     </label>
                                 </div>
+                                @error('registration')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div>
                                 <label for="course" class="">Seu curso</label>
@@ -100,26 +88,41 @@
                                     <option value="9">Servidor do CEFET</option>
                                     <option value="0">Não tenho curso</option>
                                 </select>
+                                @error('course')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="tab">
                             <div>
                                 <label for="birth_date" class="">Data de Nascimento</label>
                                 <input type="date" name="birth_date" id="birth_date" placeholder="Sua data de nascimento" class="" required="" value="{{ old('birth_date') }}">
+                                @error('birth_date')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div>
                                 <label for="phone" class="">Telefone</label>
                                 <input onkeydown="phoneNumberFormatter()" type="tel" name="phone" id="phone" placeholder="(99) 99999-9999" class="" maxlength="15" pattern="(\([0-9]{2}\))\s([9]{1})?([0-9]{5})-([0-9]{4})" autocomplete="off" value="{{ old('phone') }}">
+                                @error('phone')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                         </div>
                         <div class="tab">
                             <div>
                                 <label for="password" class="">Senha</label>
                                 <input type="password" name="password" id="password" placeholder="••••••••" class="" required="">
+                                @error('password')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div>
                                 <label for="password_confirmation" class="">Confirme a senha</label>
                                 <input type="password" name="password_confirmation" id="password_confirmation" placeholder="••••••••" class="" required="">
+                                @error('password_confirmation')
+                                <span class="error">{{ $message }}</span>
+                                @enderror
                             </div>
                             <div class="">
                                 <div class="">

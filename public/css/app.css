@@ -787,5 +787,6 @@ nav .perfil:hover{
     }
     .error {
         color: rgba(220,38,38,1 );
+        font-size: 0.83rem;
     }
 }

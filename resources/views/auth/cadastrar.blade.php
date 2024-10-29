@@ -17,7 +17,7 @@
                 <div class="signup">
                     <h2 class="title">Cadastrar</h2>
                     <p>Crie uma conta</p>
-                    <form class="inputbox" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
+                    <form class="inputbox" id="createform" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
                         <div class="step-ball">
                             <span class="step"></span>
@@ -132,6 +132,7 @@
                                 </div>
                             </div>
                         </div>
+
                     </form>
                 </div>
             </div>
@@ -172,7 +173,7 @@
             // if you have reached the end of the form... :
             if (currentTab >= x.length) {
                 //...the form gets submitted:
-                document.getElementById("regForm").submit();
+                document.getElementById("createform").submit();
                 return false;
             }
             // Otherwise, display the correct tab:

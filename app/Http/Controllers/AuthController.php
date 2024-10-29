@@ -36,7 +36,7 @@ class AuthController extends Controller
         Validator::make($request->all(), [
             'name' => 'required',
             'last_name' => 'required',
-            'registration' => new ValidadeRegistration($registrationfalse),
+            'registration' => "unique:users,registration"|new ValidadeRegistration($registrationfalse),
             'course' => 'required',
             'birth_date' => 'required|date|before:-13 years',
             'email' => 'unique:users,email|required|email',

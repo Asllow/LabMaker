@@ -780,11 +780,11 @@ nav .perfil:hover{
     .button-pass #prevBtn{
         left: 0;
         margin-left: 1rem;
-        position: absolute;
+        position: inherit;
     }
     .button-pass #nextBtn{
         right: 0;
         margin-right: 1rem;
-        position: absolute;
+        position: inherit;
     }
 }

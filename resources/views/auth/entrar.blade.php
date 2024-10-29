@@ -4,7 +4,7 @@
 
 @section('main')
     <section class="section">
-        <div class="container2">
+        <div class="container2 lgin">
             <div class="backbox">
                 <div class="loginMsg">
                     <div class="textcontent">

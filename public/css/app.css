@@ -612,7 +612,7 @@ nav .perfil:hover{
         margin-left: 3%;
         transition: right .8s ease-in-out;
     }
-    .frontbox .login{
+    .lgin .frontbox{
         right:0;
     }
     .loginMsg .title-alt,

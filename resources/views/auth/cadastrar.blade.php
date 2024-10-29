@@ -61,13 +61,9 @@
                                 <input type="tel" name="registration" id="registration" class="" placeholder="Sua matricula"  maxlength="11" pattern="[0-9]{11}" autocomplete="off" value="{{ old('registration') }}">
                             </div>
                             <div class="">
-                                <div class="">
-                                    <input type="checkbox" class='checkbox' id="registrationfalse" name="registrationfalse" aria-describedby="registrationfalse" class="">
-                                </div>
-                                <div class="">
-                                    <label for="registrationfalse" class="">
-                                        Não possuo número de matrícula
-                                    </label>
+                                <div class="rememberme">
+                                    <input type="checkbox" class='checkbox' id="registrationfalse" name="registrationfalse" aria-describedby="registrationfalse">
+                                    <label for="registrationfalse" class="">Não possuo número de matrícula</label>
                                 </div>
                                 @error('registration')
                                 <span class="error">{{ $message }}</span>
@@ -125,13 +121,9 @@
                                 @enderror
                             </div>
                             <div class="">
-                                <div class="">
+                                <div class="rememberme">
                                     <input id="terms" aria-describedby="terms" type="checkbox" class="checkbox" required="">
-                                </div>
-                                <div class="ml-3 text-sm">
-                                    <label for="terms" class="">
-                                        Eu aceito os<a class="" href="#">Termos e Condições</a>
-                                    </label>
+                                    <label for="terms" class="">Eu aceito os<a class="" href="#">Termos e Condições</a></label>
                                 </div>
                             </div>
                         </div>

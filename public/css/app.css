@@ -678,7 +678,7 @@ nav .perfil:hover{
         box-sizing: content-box;
         padding:.7rem;
         border-radius: .7rem;
-        width: 4rem;
+        width: 4.46rem;
         cursor: pointer;
     }
     .container2{
@@ -770,8 +770,8 @@ nav .perfil:hover{
     }
     .step-ball{
         position: absolute;
-        margin-left: 8rem;
-        margin-top: 16rem;
+        margin-left: 8.35rem;
+        margin-top: 15.79rem;
     }
     .button-pass #prevBtn{
         left: 0;

@@ -19,6 +19,12 @@
                     <p>Crie uma conta</p>
                     <form class="inputbox" action="{{ route('cadastrar.save') }}" method="POST" class="space-y-4 md:space-y-6">
                         @csrf
+                        <div style="text-align:center;margin-top:40px;">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
                         <div class="tab">
                             <div>
                                 <label for="name" class="">Nome</label>
@@ -127,12 +133,6 @@
                                 <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
                                 <button type="button" id="nextBtn" onclick="nextPrev(1)">Próximo</button>
                             </div>
-                        </div>
-                        <div style="text-align:center;margin-top:40px;">
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
-                            <span class="step"></span>
                         </div>
                     </form>
                 </div>

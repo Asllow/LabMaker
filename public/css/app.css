@@ -624,7 +624,7 @@ nav .perfil:hover{
     }
     .textcontent{
         color: var(--body-color);
-        margin-top: 25%;
+        margin-top: 5rem;
         margin-left: 2rem;
         display: flex;
         flex-direction: column;
@@ -642,7 +642,7 @@ nav .perfil:hover{
     /* front box content*/
     .login, .signup{
         padding: 20px;
-        text-align: center;
+        text-align: justify;
     }
 
     .inputbox{

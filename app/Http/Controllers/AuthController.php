@@ -50,7 +50,7 @@ class AuthController extends Controller
         ])->validate();
 
         $new_name = ucwords($request->name);
-        $new_last_name = ucwords($request->lats_name);
+        $new_last_name = ucwords($request->last_name);
 
         User::create([
             'name' => $new_name,

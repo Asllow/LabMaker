@@ -70,8 +70,8 @@
                                 @enderror
                             </div>
                             <div>
-                                <label for="course" class="">Seu curso</label>
-                                <select name="course" id="course" required>
+                                <label for="course" class="course">Seu curso</label>
+                                <select name="course" id="course" class="course-selector" required>
                                     <option selected disabled>Selecione seu curso</option>
                                     <option value="1">Engenharia Mecatrônica</option>
                                     <option value="2">Engenharia de Computação</option>
@@ -123,7 +123,7 @@
                             <div class="">
                                 <div class="rememberme">
                                     <input id="terms" aria-describedby="terms" type="checkbox" class="checkbox" required="">
-                                    <label for="terms" class="">Eu aceito os<a class="" href="#">Termos e Condições</a></label>
+                                    <label for="terms" class="">Eu aceito os <a class="terms" href="#">Termos e Condições</a></label>
                                 </div>
                             </div>
                         </div>

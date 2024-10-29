@@ -802,4 +802,15 @@ nav .perfil:hover{
         margin-right: 1rem;
         margin-top: 1.8rem;
     }
+    .terms{
+        color: var(--base-color-alt);
+    }
+    .course{
+        margin-top: 1.2rem;
+    }
+    .course-selector{
+        padding: 0.25rem;
+        border: 2px solid var(--base-color-alt);
+        border-radius: 0.4rem;
+    }
 }

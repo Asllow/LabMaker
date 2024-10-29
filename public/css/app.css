@@ -744,4 +744,27 @@ nav .perfil:hover{
         padding-right: 0.5rem;
         width: 1.8rem;
     }
+    .login input.invalid,
+    .signup input.invalid{
+        background-color: rgba(225, 81, 81, 0.82);
+    }
+    .tab {
+        display: none;
+    }
+    .step {
+        height: 0.9rem;
+        width: 0.9rem;
+        margin: 0 2px;
+        background-color: var(--text-color);
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+    }
+    .step.active {
+        opacity: 1;
+    }
+    .step.finish {
+        background-color: var(--base-color-alt);
+    }
 }

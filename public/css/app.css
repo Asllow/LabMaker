@@ -734,6 +734,7 @@ nav .perfil:hover{
     .login input:focus,
     .signup input:focus{
         border-bottom: 1px solid var(--base-color);
+        background-color: var(--body-color);
     }
     .input-icon{
         display: flex;

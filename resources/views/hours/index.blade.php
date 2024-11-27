@@ -17,10 +17,10 @@
     @endif
 </div>
 <div>
-    <table>
+    <table style="border-collapse: separate; border-spacing: 50px 0;">
         <thead class="">
         <tr>
-            <th scope="col" style="margin: 0 1rem" class="px-6 py-3">Id</th>
+            <th scope="col" class="px-6 py-3">Id</th>
             <th scope="col" class="px-6 py-3">Matrícula</th>
             <th scope="col" class="px-6 py-3">Data</th>
             <th scope="col" class="px-6 py-3">Entrada/Saída</th>
@@ -29,16 +29,16 @@
         @foreach($results_all as $rs)
             <tbody>
                 <tr>
-                    <td>
+                    <td style="padding: 10px 0">
                         {{ $rs->id }}
                     </td>
-                    <td>
+                    <td style="padding: 10px 0">
                         {{ $rs->registration }}
                     </td>
-                    <td>
+                    <td style="padding: 10px 0">
                         {{ $rs->created_at }}
                     </td>
-                    <td>
+                    <td style="padding: 10px 0">
                         {{ $rs->io }}
                     </td>
                 </tr>

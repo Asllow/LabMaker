@@ -110,13 +110,7 @@ class PontoController extends Controller
         }
         foreach ($results_id_maker as $results) {
             $results->update(['io' => 0]);
-            PunchClock::create([
-                'registration' => $results->registration,
-                'io' => '0'
-            ]);
-            $result_se = PunchClock::where('registration', $results->registration)->delete();
-            DB::table('main_invoice')->
-            orderBy('id', 'desc')->limit(1)->delete();
+            PunchClock::where('registration', $results->registration)->orderBy('created_at', 'desc')->limit(1)->delete();
         }
         return "Entrada de ponto excluída";
     }

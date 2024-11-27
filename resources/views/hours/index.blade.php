@@ -18,17 +18,19 @@
 </div>
 <div>
         @foreach($results_all as $rs)
-            <td>
-                {{ $rs->id }}
-            </td>
-            <td>
-                {{ $rs->registration }}
-            </td>
-            <td>
-                {{ $rs->created_at }}
-            </td>
-            <td>
-                {{ $rs->io }}
-            </td>
+            <tr>
+                <td>
+                    {{ $rs->id }}
+                </td>
+                <td>
+                    {{ $rs->registration }}
+                </td>
+                <td>
+                    {{ $rs->created_at }}
+                </td>
+                <td>
+                    {{ $rs->io }}
+                </td>
+            </tr>
         @endforeach
 </div>

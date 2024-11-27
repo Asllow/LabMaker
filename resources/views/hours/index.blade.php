@@ -15,10 +15,9 @@
             </fieldset>
         </div>
     @endif
-    <div>
-        <br>
-        <fieldset>
-            {{ $results_all }}
-        </fieldset>
-    </div>
+</div>
+<div>
+    <fieldset>
+        {{ $results_all }}
+    </fieldset>
 </div>

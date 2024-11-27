@@ -18,9 +18,9 @@
 </div>
 <div>
     <table>
-        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <thead class="">
         <tr>
-            <th scope="col" class="px-6 py-3">Id</th>
+            <th scope="col" style="margin: 0 1rem" class="px-6 py-3">Id</th>
             <th scope="col" class="px-6 py-3">Matrícula</th>
             <th scope="col" class="px-6 py-3">Data</th>
             <th scope="col" class="px-6 py-3">Entrada/Saída</th>

@@ -51,6 +51,8 @@ class PontoController extends Controller
                 return $this->getDateTime();
             case "6":
                 return "!";
+            case "9":
+                return $this->removeRemnants1();
             default:
                 abort(404);
         }
@@ -112,8 +114,28 @@ class PontoController extends Controller
                 'registration' => $results->registration,
                 'io' => '0'
             ]);
+            $result_se = PunchClock::where('registration', $results->registration)->delete();
+            DB::table('main_invoice')->
+            orderBy('id', 'desc')->limit(1)->delete();
         }
-        return "Saida Registrada";
+        return "Entrada de ponto excluída";
+    }
+    private function removeRemnants1(): string
+    {
+        $results_id_maker = IdMaker::where('io', 1)->get() ?? 0;
+        if (!$results_id_maker) {
+            return "Erro 5";
+        }elseif (count($results_id_maker)==0){
+            return "Usuarios Ausentes";
+        }
+        foreach ($results_id_maker as $results) {
+            $results->update(['io' => 0]);
+            PunchClock::create([
+                'registration' => $results->registration,
+                'io' => '0'
+            ]);
+        }
+        return "Usuários Deslogados";
     }
     private function getDateTime(): string
     {

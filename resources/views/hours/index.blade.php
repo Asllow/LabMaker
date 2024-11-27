@@ -18,15 +18,15 @@
 </div>
 <div>
     <table>
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+        <tr>
+            <th scope="col" class="px-6 py-3">Id</th>
+            <th scope="col" class="px-6 py-3">Matrícula</th>
+            <th scope="col" class="px-6 py-3">Data</th>
+            <th scope="col" class="px-6 py-3">Entrada/Saída</th>
+        </tr>
+        </thead>
         @foreach($results_all as $rs)
-            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr>
-                    <th scope="col" class="px-6 py-3">Id</th>
-                    <th scope="col" class="px-6 py-3">Matrícula</th>
-                    <th scope="col" class="px-6 py-3">Data</th>
-                    <th scope="col" class="px-6 py-3">Entrada/Saída</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
                     <td>

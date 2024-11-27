@@ -17,7 +17,6 @@
     @endif
 </div>
 <div>
-    <fieldset>
         @foreach($results_all as $rs)
             <td>
                 {{ $rs->id }}
@@ -32,5 +31,4 @@
                 {{ $rs->io }}
             </td>
         @endforeach
-    </fieldset>
 </div>

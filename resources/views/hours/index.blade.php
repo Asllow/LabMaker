@@ -18,6 +18,19 @@
 </div>
 <div>
     <fieldset>
-        {{ $results_all }}
+        @foreach($results_all as $rs)
+            <td>
+                {{ $rs->id }}
+            </td>
+            <td>
+                {{ $rs->registration }}
+            </td>
+            <td>
+                {{ $rs->created_at }}
+            </td>
+            <td>
+                {{ $rs->io }}
+            </td>
+        @endforeach
     </fieldset>
 </div>

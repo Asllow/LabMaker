@@ -123,7 +123,7 @@
                             <div class="">
                                 <div class="rememberme">
                                     <input id="terms" aria-describedby="terms" type="checkbox" class="checkbox" required="">
-                                    <label for="terms" class="">Eu aceito os <a class="terms" href="#">Termos e Condições</a></label>
+                                    <label for="terms" class="">Eu aceito os <a class="terms" href="#">Termos e Condições</a> e a <a class="terms" href="#">Política de Privacidade</a></label>
                                 </div>
                             </div>
                         </div>

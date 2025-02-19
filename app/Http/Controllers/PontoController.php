@@ -34,7 +34,7 @@ class PontoController extends Controller
             1 => 0,
         };
         $results_id_maker->update(['estado' => $io]);
-        return "FEITO";
+        return $io;
     }
 
     public function gethours(string $registration, string $date)

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\IdMaker;
+use App\Models\MInecraft;
 use App\Models\PunchClock;
 use App\Models\User;
 use Carbon\Carbon;
@@ -27,8 +28,12 @@ class PontoController extends Controller
         else{
             $any = "desligar";
         }
-        $results_minecraft = IdMaker::firstWhere('id', $any);
-        dd($results_minecraft);
+        $results_id_maker = MInecraft::firstWhere('id', $any) ?? 0;
+        $io = match ($results_id_maker->estado) {
+            0 => 1,
+            1 => 0,
+        };
+        $results_id_maker->update(['estado' => $io]);
     }
 
     public function gethours(string $registration, string $date)

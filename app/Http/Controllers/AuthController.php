@@ -96,4 +96,12 @@ class AuthController extends Controller
         $request->session()->invalidate();
         return redirect(route('welcome'));
     }
+
+    public function termosecondicoes(){
+
+    }
+
+    public function politicasdeprivacidade(){
+
+    }
 }

@@ -123,7 +123,7 @@
                             <div class="">
                                 <div class="rememberme">
                                     <input id="terms" aria-describedby="terms" type="checkbox" class="checkbox" required="">
-                                    <label for="terms" class="">Eu aceito os <a class="terms" href="#">Termos e Condições</a> e a <a class="terms" href="#">Política de Privacidade</a></label>
+                                    <label for="terms" class="">Eu aceito os <a class="terms" href="{{ route('termosecondicoes') }}">Termos e Condições</a> e as <a class="terms" href="{{ route('politicasdeprivacidade') }}">Políticas de Privacidade</a></label>
                                 </div>
                             </div>
                         </div>

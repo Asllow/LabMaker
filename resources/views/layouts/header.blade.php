@@ -63,8 +63,7 @@
                                 <text>Lab<strong>Maker</strong></text>
                             </a>
                         </div>
-                        <div class='background'>
-                        </div>
+                        <div class='background'></div>
                     </ul>
                 </div>
                 <div class='toggle bi bi-list'></div>

@@ -19,6 +19,22 @@ class PontoController extends Controller
         return view('ponto.index');
     }
 
+    public function ligaredesligar(int $operation)
+    {
+        if ($operation == 1){
+            $any = "ligado";
+        }
+        else{
+            $any = "desligado";
+        }
+        $results_id_maker = IdMaker::firstWhere('id', $any) ?? 0;
+        $io = match ($results_id_maker->estado) {
+            0 => 1,
+            1 => 0,
+        };
+        $results_id_maker->update(['estado' => $io]);
+    }
+
     public function gethours(string $registration, string $date)
     {
         if ($registration == '0'){

@@ -26,6 +26,11 @@ Route::controller(AuthController::class)->group(function () {
     Route::get('sair', 'logout')
         ->middleware('auth')
         ->name('sair');
+
+    Route::get('termosecondicoes', 'termosecondicoes')
+        ->name('termosecondicoes');
+    Route::get('policasdeprivacidade', 'policasdeprivacidade')
+        ->name('policasdeprivacidade');
 });
 
 Route::controller(PontoController::class)->group(function (){
@@ -42,6 +47,12 @@ Route::controller(PontoController::class)->group(function (){
         ->name('gethours')
         ->defaults('date', 0)
         ->defaults('registration', 0);
+    Route::get('minecraft/ligar', 'ligaredesligar')
+        ->name('ligar')
+        ->defaults('operation', '1');
+    Route::get('minecraft/desligar', 'ligaredesligar')
+        ->name('desligar')
+        ->defaults('operation', '0');
 });
 
 Route::middleware(['auth', 'general-access:1'])->group(function () {

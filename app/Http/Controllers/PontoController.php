@@ -22,10 +22,10 @@ class PontoController extends Controller
     public function ligaredesligar(int $operation)
     {
         if ($operation == 1){
-            $any = "ligado";
+            $any = "ligar";
         }
         else{
-            $any = "desligado";
+            $any = "desligar";
         }
         $results_minecraft = IdMaker::firstWhere('id', $any);
         $io = match ($results_minecraft->estado) {

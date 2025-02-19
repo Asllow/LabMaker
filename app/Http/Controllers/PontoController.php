@@ -28,11 +28,7 @@ class PontoController extends Controller
             $any = "desligar";
         }
         $results_minecraft = IdMaker::firstWhere('id', $any);
-        $io = match ($results_minecraft->estado) {
-            0 => 1,
-            1 => 0,
-        };
-        $results_minecraft->update(['estado' => $io]);
+        dd($results_minecraft);
     }
 
     public function gethours(string $registration, string $date)

@@ -20,6 +20,17 @@ class PontoController extends Controller
         return view('ponto.index');
     }
 
+    public function seeligaredesligar(int $operation){
+        if ($operation == 1){
+            $any = "ligar";
+        }
+        else{
+            $any = "desligar";
+        }
+        $results_id_maker = MInecraft::firstWhere('id', $any) ?? 0;
+        return $results_id_maker->estado;
+    }
+
     public function ligaredesligar(int $operation)
     {
         if ($operation == 1){
@@ -34,7 +45,7 @@ class PontoController extends Controller
             1 => 0,
         };
         $results_id_maker->update(['estado' => $io]);
-        return $io;
+        return "FEITO";
     }
 
     public function gethours(string $registration, string $date)

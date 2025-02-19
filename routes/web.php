@@ -53,6 +53,12 @@ Route::controller(PontoController::class)->group(function (){
     Route::get('minecraft/desligar', 'ligaredesligar')
         ->name('desligar')
         ->defaults('operation', '0');
+    Route::get('minecraft/ver/ligar', 'seeligaredesligar')
+        ->name('seeligar')
+        ->defaults('operation', '1');
+    Route::get('minecraft/ver/desligar', 'seeligaredesligar')
+        ->name('desligar')
+        ->defaults('seeoperation', '0');
 });
 
 Route::middleware(['auth', 'general-access:1'])->group(function () {

@@ -29,8 +29,8 @@ Route::controller(AuthController::class)->group(function () {
 
     Route::get('termosecondicoes', 'termosecondicoes')
         ->name('termosecondicoes');
-    Route::get('policasdeprivacidade', 'policasdeprivacidade')
-        ->name('policasdeprivacidade');
+    Route::get('politicasdeprivacidade', 'politicasdeprivacidade')
+        ->name('politicasdeprivacidade');
 });
 
 Route::controller(PontoController::class)->group(function (){

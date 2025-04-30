@@ -102,6 +102,6 @@ class AuthController extends Controller
     }
 
     public function politicasdeprivacidade(){
-
+        return 'teste';
     }
 }

@@ -105,7 +105,7 @@ class PontoController extends Controller
         $results_id_maker = IdMaker::firstWhere('hexa_id', $any) ?? 0;
         if (!$results_id_maker) {return 'Erro 2';}
         $seek_active = $results_id_maker->active;
-        if ($seek_active == 0){return 'User Bloqueado';}
+        if ($seek_active == 0){return 'Erro 6';}
         $results_user = User::firstWhere('registration', $results_id_maker->registration) ?? 0;
         if (!$results_user ) {return 'Erro 3';}
         return $results_id_maker->registration . $results_user ->name . " " . $results_user ->last_name;

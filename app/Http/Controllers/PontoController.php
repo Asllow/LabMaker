@@ -97,6 +97,9 @@ class PontoController extends Controller
         $this->checkAny($any);
         $results_user = User::firstWhere('registration', $any) ?? 0;
         if (!$results_user) {return 'Erro 1';}
+        $results_id_maker = IdMaker::firstWhere('registration', $any) ?? 0;
+        $seek_active = $results_id_maker->active;
+        if ($seek_active == 0){return 'Erro 7';}
         return $results_user->registration . $results_user->name . " " . $results_user->last_name;
     }
     private function checkHexaId($any): string
